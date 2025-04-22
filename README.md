@@ -12,7 +12,7 @@ Welcome to the **LearnFlow** front-end repository! This project powers the user 
 - 🎧 **Listening & Pronunciation**: Practice listening with audio-based challenges and improve pronunciation with microphone-enabled exercises.
 - 🏆 **Gamified Learning**: Complete daily quests, play mini-games (e.g., missing letter, word meaning), and earn points to customize avatars in the item shop.
 - 🌐 **Community Engagement**: Connect with friends, exchange messages, and compete on leaderboards to track progress.
-- ⚙️ **Personalization**: Customize audio settings, interface themes, and notifications for a tailored learning experience.
+- ⚙️ **Personalization**: Customize audio settings and notifications for a tailored learning experience.
 - 📊 **Progress Tracking**: Monitor learning progress with detailed lesson lists, error logs, and vocabulary trackers.
 
 ---
@@ -36,13 +36,13 @@ Welcome to the **LearnFlow** front-end repository! This project powers the user 
 │   ├── services          # API call handlers and service logic
 │   ├── styles            # Tailwind CSS and custom styles
 │   ├── utils             # Helper functions and utilities
-│   ├── App.jsx           # Main app component with routing
-│   └── index.jsx         # Application entry point
+│   ├── App.tsx           # Main app component with routing
+│   └── index.tsx         # Application entry point
 ├── .gitignore            # Files and folders to ignore in Git
 ├── package.json          # NPM configuration and dependencies
-├── tailwind.config.js    # Tailwind CSS configuration
+├── tailwind.config.ts    # Tailwind CSS configuration
 ├── README.md             # Project documentation
-└── vite.config.js        # Vite configuration for fast development
+└── vite.config.ts        # Vite configuration for fast development
 ```
 
 ---
@@ -52,7 +52,7 @@ Welcome to the **LearnFlow** front-end repository! This project powers the user 
 Branches should follow a clear naming format for consistency:
 
 ```plaintext
-<prefix>/<SE-XX>-<task-name>
+<prefix>/<ST-XX>-<task-name>
 ```
 
 - **Prefix** options:
@@ -61,7 +61,7 @@ Branches should follow a clear naming format for consistency:
   - `chore/` – Maintenance tasks
   - `refactor/` – Code restructuring
 
-> Example: For task `[SE10][FE]Implement lesson page`, use `feature/SE10-implement-lesson-page`.
+> Example: For task `[ST10][FE]Implement lesson page`, use `feature/ST10-implement-lesson-page`.
 
 ---
 
@@ -70,7 +70,7 @@ Branches should follow a clear naming format for consistency:
 Commits should follow a structured format for clarity:
 
 ```plaintext
-<prefix>(<SE-XX>): <commit message>
+<prefix>(<ST-XX>): <commit message>
 ```
 
 - **Prefix** options:
@@ -79,7 +79,7 @@ Commits should follow a structured format for clarity:
   - `chore` – Maintenance tasks
   - `refactor` – Code restructuring
 
-> Example: For task `[SE10][FE]Implement lesson page`, use `feat(SE10): implement lesson page UI`.
+> Example: For task `[ST10][FE]Implement lesson page`, use `feat(ST10): implement lesson page UI`.
 
 ---
 

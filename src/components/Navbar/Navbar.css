@@ -1,33 +1,142 @@
 .navbar {
+  background-color: #fff !important; /* White background as requested */
+  box-shadow: none !important; /* Remove default MUI shadow */
+}
+
+.navbar-container {
+  max-width: 2000px; /* Keep the wide layout */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.5rem; /* Reduced padding to bring elements closer to edges */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem; /* Rounded corners for the navbar */
+  border-bottom: 5px solid #00b1fe; /* Blue border as per Figma */
+  border-left: #00b1fe solid 2px; /* Blue left border as per Figma */
+  border-right: #00b1fe solid 2px; /* Blue right border as per Figma */
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem; /* Reduced space between brand and menu */
 }
 
-.navbar-brand a {
+.navbar-logo-icon {
+  color: #00b1fe; /* Blue icon to contrast with white background */
+  font-size: 24px;
+  margin-right: 0.5rem;
+}
+
+.navbar-brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red; /* Darker color for contrast with white background */
   text-decoration: none;
-  color: #333;
 }
 
 .navbar-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem; /* Reduced gap to bring menu items closer together */
 }
 
 .navbar-item {
   text-decoration: none;
-  color: #555;
+  color: black; /* Darker color for contrast with white background */
+  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s;
+  position: relative; /* Needed for the ::after pseudo-element positioning */
 }
 
 .navbar-item:hover {
-  color: #007bff;
+  color: #00b1fe; /* Blue on hover for consistency */
+}
+
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the border */
+  background-color: #00b1fe; /* Blue color to match the theme */
+  bottom: -2px; /* Position just below the text */
+  left: 0;
+  transition: width 0.3s ease; /* Animate the width */
+}
+
+.navbar-item:hover::after {
+  width: 100%; /* Expand to full width on hover */
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 0.3rem; /* Reduced gap to bring buttons closer to the right edge */
+}
+
+.navbar-button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.navbar-button.signup {
+  border-color: #08b4fc; /* Blue border */
+  color: #08b4fc; /* Blue text */
+  background-color: #fff; /* White background */
+}
+
+.navbar-button.signup:hover {
+  background-color: #e0e0e0; /* Slightly darker white on hover */
+  color: #00b1fe;
+  border-color: #00b1fe;
+}
+
+.navbar-button.login {
+  background-color: #00b1fe; /* Blue background as requested */
+  color: #fff; /* White text */
+  box-shadow: none !important;
+}
+
+.navbar-button.login:hover {
+  background-color: #00b1fe; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbar-menu {
+    gap: 1rem;
+  }
+
+  .navbar-actions {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand-text {
+    font-size: 1.2rem;
+  }
+
+  .navbar-item {
+    font-size: 0.9rem;
+  }
+
+  .navbar-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
 }

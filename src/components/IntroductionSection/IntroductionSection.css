@@ -1,0 +1,199 @@
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #f6f6f7; /* White background for the text section */
+}
+
+.introduction-text {
+  text-align: center;
+  color: #000;
+  max-width: 900px;
+  margin-bottom: 32px; /* Space between text and image */
+}
+
+.h1-box {
+  background-color: #fff; /* White background for the box */
+  padding: 10px 20px; /* Padding inside the box */
+  border-radius: 8px; /* Slight border-radius for a modern look */
+  display: inline-block; /* Fit the box to the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 15px; /* Add margin to create space between the box and h2 */
+}
+
+.introduction-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center; /* Align the wave icon and text vertically */
+  gap: 8px; /* Space between the wave icon and text */
+  margin: 0; /* Remove default margin to fit nicely in the box */
+}
+
+.introduction-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.introduction-text p {
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; /* Needed for the typing animation */
+  margin: 0; /* Remove default margin to control spacing with the typing div */
+}
+
+.introduction-image {
+  width: 100%;
+  max-width: 1200px; /* Limit the width to match the design */
+  height: 430px; /* Adjust height based on the image's aspect ratio */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wave-icon {
+  width: 50px; /* Adjust size based on the Wave.png dimensions */
+  height: 50px;
+  padding-top: 0.3rem;
+}
+
+/* Highlight class for the word "Unlock" */
+.highlight {
+  color: #00b1fe; /* Blue color for "Unlock" */
+}
+
+/* Typing animation for the p element */
+.typing {
+  display: flex;
+  flex-direction: column; /* Stack the text and cursor vertically */
+  align-items: center; /* Center the text and cursor */
+  opacity: 0; /* Start with the entire typing section hidden */
+  animation: reveal 0s forwards; /* Instantly reveal the section after delay */
+  animation-delay: 2s; /* Wait for h1 and h2 to finish fading in */
+}
+
+.typing-text {
+  white-space: nowrap; /* Prevent text wrapping during animation */
+  overflow: hidden; /* Hide the text until the animation reveals it */
+  display: inline-block;
+  width: 0; /* Start with no width */
+  animation: typing 2s steps(48, end) forwards; /* Typing animation */
+  animation-delay: 2s; /* Start after h1 and h2 fade-in */
+}
+
+.cursor {
+  display: block; /* Move the cursor to a new line */
+  font-size: 1.3rem; /* Match the p font size */
+  color: #00b1fe; /* Blue cursor to match the theme */
+  line-height: 1; /* Prevent extra spacing */
+  animation: blink 0.7s step-end 6; /* Blink 6 times (approx. 2s of typing) */
+  animation-delay: 2s; /* Start blinking after h1 and h2 fade-in */
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .introduction-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .introduction-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .introduction-text p {
+    font-size: 1.1rem;
+  }
+
+  .introduction-image {
+    height: 200px;
+  }
+
+  .wave-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .h1-box {
+    padding: 8px 16px;
+    margin-bottom: 12px; /* Adjust margin for smaller screens */
+  }
+
+  .cursor {
+    font-size: 1.1rem; /* Match the p font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .introduction-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .introduction-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .introduction-text p {
+    font-size: 0.9rem;
+  }
+
+  .introduction-image {
+    height: 150px;
+  }
+
+  .wave-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .h1-box {
+    padding: 6px 12px;
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  
+}

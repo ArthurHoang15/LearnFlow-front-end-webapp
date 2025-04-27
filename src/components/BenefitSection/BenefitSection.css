@@ -1,14 +1,14 @@
 .benefit-section {
-    padding: 40px 20px;
+    padding: 32px 20px;
     background-color: #f6f6f7;
     text-align: left; /* Align content to the left */
+    margin-top:1.5rem;
   }
 
   .benefit-heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #00b1fe; /* Blue color for "Benefits" */
-    margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     max-width: 1200px; /* Match the grid width */
@@ -19,7 +19,7 @@
   .benefit-subheading {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
     max-width: 1200px; /* Match the grid width */
     margin-left: auto; /* Center the content within the max-width */

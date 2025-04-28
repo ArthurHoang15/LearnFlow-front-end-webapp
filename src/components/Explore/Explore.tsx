@@ -4,7 +4,7 @@
    import Profile from '../../assets/images/Profile.png';
    import Stories from '../../assets/images/Stories.png';
    import Vocab from '../../assets/images/Vocab.png';
-   import './ExploreSection.css';
+   import './Explore.css';
    import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
    import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 

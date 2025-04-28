@@ -1,4 +1,4 @@
-import './BenefitSection.css';
+import './Benefit.css';
 
 export const BenefitSection = () => {
   return (

@@ -1,6 +1,6 @@
-import {IntroductionSection} from '../../components/IntroductionSection/IntroductionSection.tsx';
-import {BenefitSection} from '../../components/BenefitSection/BenefitSection.tsx';
-import {ExploreSection} from '../../components/ExploreSection/ExploreSection.tsx';
+import {IntroductionSection} from '../../components/Introduction/Introduction.tsx';
+import {BenefitSection} from '../../components/Benefit/Benefit.tsx';
+import {ExploreSection} from '../../components/Explore/Explore.tsx';
 export const HomePage = () => {
   return (
     <div>

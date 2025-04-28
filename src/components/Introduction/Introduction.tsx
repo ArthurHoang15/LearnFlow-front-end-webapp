@@ -1,4 +1,4 @@
-import './IntroductionSection.css';
+import './Introduction.css';
 import LearnFlow from '../../assets/images/LearnFlow.png';
 import Wave from '../../assets/images/Wave.png';
 

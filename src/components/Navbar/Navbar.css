@@ -4,10 +4,10 @@
 }
 
 .navbar-container {
-  max-width: 1920px; /* Keep the wide layout */
+  max-width: 2000px; /* Keep the wide layout */
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0.5rem; /* Reduced padding to bring elements closer to edges */
+  padding: 0 0.5rem; /* Reduced padding to bring elements closer to edges */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,9 +30,16 @@
   margin-right: 0.5rem;
 }
 
+.navbar-brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red; /* Darker color for contrast with white background */
+  text-decoration: none;
+}
+
 .navbar-menu {
   display: flex;
-  gap: 2rem; /* Reduced gap to bring menu items closer together */
+  gap: 1.2rem; /* Reduced gap to bring menu items closer together */
 }
 
 .navbar-item {

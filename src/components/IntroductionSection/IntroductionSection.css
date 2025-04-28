@@ -9,8 +9,8 @@
 .introduction-text {
   text-align: center;
   color: #000;
-  max-width: 900px;
-  margin-bottom: 28px; /* Space between text and image */
+  max-width: 1440px;
+  margin-bottom: 20px; /* Space between text and image */
 }
 
 .h1-box {
@@ -19,7 +19,7 @@
   border-radius: 8px; /* Slight border-radius for a modern look */
   display: inline-block; /* Fit the box to the content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin-bottom: 15px; /* Add margin to create space between the box and h2 */
+  margin-bottom: 20px; /* Add margin to create space between the box and h2 */
 }
 
 .introduction-text h1 {
@@ -29,18 +29,18 @@
   display: flex;
   align-items: center; /* Align the wave icon and text vertically */
   gap: 8px; /* Space between the wave icon and text */
-  margin: 0; /* Remove default margin to fit nicely in the box */
+  margin: 10px; /* Remove default margin to fit nicely in the box */
 }
 
 .introduction-text h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
 }
 
 .introduction-text p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   display: inline-block; /* Needed for the typing animation */
   margin: 0; /* Remove default margin to control spacing with the typing div */
@@ -48,16 +48,16 @@
 
 .introduction-image {
   width: 100%;
-  max-width: 1200px; /* Limit the width to match the design */
-  height: 430px; /* Adjust height based on the image's aspect ratio */
+  max-width: 1440px; /* Limit the width to match the design */
+  height: 500px; /* Adjust height based on the image's aspect ratio */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .wave-icon {
-  width: 50px; /* Adjust size based on the Wave.png dimensions */
-  height: 50px;
+  width: 80px; /* Adjust size based on the Wave.png dimensions */
+  height: 80px;
   padding-top: 0.3rem;
 }
 

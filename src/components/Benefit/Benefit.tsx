@@ -1,8 +1,36 @@
+import { useEffect, useRef } from 'react';
 import './Benefit.css';
-
 export const BenefitSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once visible
+        }
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      }
+    );
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
+
   return (
-    <section className="benefit-section">
+    <section ref={sectionRef} className="benefit-section">
       <h2 className="benefit-heading">Benefits</h2>
       <p className="benefit-subheading">
         "LearnFlow gives you a complete English learning experience — fun, effective, and inspiring. Take one step forward every day!"

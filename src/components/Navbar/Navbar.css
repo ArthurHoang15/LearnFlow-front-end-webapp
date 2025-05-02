@@ -16,23 +16,23 @@
   border-bottom: 5px solid #00b1fe; /* Blue border as per Figma */
   border-left: #00b1fe solid 2px; /* Blue left border as per Figma */
   border-right: #00b1fe solid 2px; /* Blue right border as per Figma */
+  position: relative; /* For positioning the dropdown */
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  margin-right: 0.5rem; /* Reduced space between brand and menu */
 }
 
 .navbar-logo-icon {
-  color: #00b1fe; /* Blue icon to contrast with white background */
-  font-size: 24px;
-  margin-right: 0.5rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .navbar-menu {
   display: flex;
-  gap: 2rem; /* Reduced gap to bring menu items closer together */
+  gap: 2rem; /* Gap for horizontal layout on desktop */
+  align-items: center;
 }
 
 .navbar-item {
@@ -68,12 +68,21 @@
   gap: 0.3rem; /* Reduced gap to bring buttons closer to the right edge */
 }
 
+.navbar-actions-mobile {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically in dropdown */
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem; /* Space above buttons in dropdown */
+}
+
 .navbar-button {
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
   text-transform: none;
+  min-width: 80px; /* Ensure buttons are tappable on mobile */
 }
 
 .navbar-button.signup {
@@ -95,41 +104,144 @@
 }
 
 .navbar-button.login:hover {
-  background-color: #00b1fe; /* Darker blue on hover */
+  background-color: #0088cc; /* Slightly darker blue on hover */
+}
+
+.navbar-mobile-toggle {
+  color: #00b1fe; /* Blue icon to match theme */
+  display: none; /* Hidden by default, shown on mobile via sx prop */
+}
+
+.navbar-close-icon {
+  color: #000; /* Black close icon to match the image */
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 1rem;
-  }
-
+@media (min-width: 1025px) { /* Desktop */
   .navbar-brand {
-    margin-right: 0;
+    margin-right: 2rem; /* Add space between logo and menu items */
   }
 
   .navbar-menu {
-    gap: 1rem;
+    flex: 1; /* Allow menu to take remaining space */
   }
-
-  .navbar-actions {
-    gap: 0.5rem;
+  .navbar-item{
+    font-size: 1.2rem!important; /* Larger font size for desktop */
+  }
+  .navbar-button {
+    font-size: 1rem!important; /* Larger font size for desktop */
   }
 }
 
-@media (max-width: 480px) {
-  .navbar-brand-text {
-    font-size: 1.2rem;
+@media (max-width: 1024px) { /* Tablet */
+  .navbar-container {
+    padding: 0.8rem 1rem; /* Slightly reduced padding */
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: -100%; /* Hidden above the screen by default */
+    left: 0;
+    width: 100%; /* Full width for the dropdown */
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow below the dropdown */
+    transition: top 0.3s ease; /* Slide-down animation */
+    z-index: 1000; /* Ensure it overlays other content */
+  }
+
+  .navbar-menu-open {
+    top: 100%; /* Slide down to just below the navbar */
   }
 
   .navbar-item {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* Slightly larger for readability in dropdown */
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-item::after {
+    bottom: 0; /* Adjust underline position for dropdown */
   }
 
   .navbar-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
+    width: 100%; /* Full width in the dropdown */
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-logo-icon {
+    width: 2.5rem; /* Adjust size for tablet */
+    height: 2.5rem;
+  }
+
+  .navbar-mobile-toggle {
+    position: absolute;
+    top: 0.3rem;
+    right: 0rem;
+    display: block; /* Ensure toggle is visible */
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Smaller Tablets */
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-menu {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-item {
+    font-size: 1rem !important;
+    padding: 0.4rem 0;
+  }
+
+  .navbar-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar-logo-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .navbar-mobile-toggle {
+    top: 0.3rem !important;
+    right: 0.3rem !important;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) { /* Mobile */
+  .navbar-container {
+    padding: 0rem;
+  }
+
+  .navbar-menu {
+    padding: 1rem 0.5rem;
+  }
+
+  .navbar-item {
+    font-size: 0.7rem !important;
+    padding-bottom: 0rem !important;
+    padding-top: 0.1rem !important;
+  }
+
+  .navbar-button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .navbar-logo-icon {
+    width: 1.6rem !important;
+    height: 1.6rem !important;  
+  }
+
+  .navbar-mobile-toggle {
+    top: 0.2rem !important;
+    right: 0rem !important;
+    font-size: 1rem !important;
   }
 }

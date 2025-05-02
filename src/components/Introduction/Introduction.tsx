@@ -9,7 +9,7 @@ export const IntroductionSection = () => {
         <div className="h1-box fade-in">
           <h1>
             <img src={Wave} alt="Wave" className="wave-icon" />
-            <span className="highlight">Unlock</span> Your English Potential
+            <span className="highlight">Unlock</span>Your English Potential
           </h1>
         </div>
         <h2 className="fade-in">With Engaging Lessons, Games, and Social Learning Tools.</h2>

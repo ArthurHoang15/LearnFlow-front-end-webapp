@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 20px;
+  padding-bottom: 64px; 
+  padding-top: 32px;
+  padding-left: 20px; /* Space between text and image */
+  padding-right: 20px; /* Space between text and image */
   background-color: #f6f6f7; /* White background for the text section */
 }
 
@@ -50,15 +53,16 @@
   width: 100%;
   max-width: 1440px; /* Limit the width to match the design */
   height: 500px; /* Adjust height based on the image's aspect ratio */
-  background-size: cover;
+  background-size: cover; /* Ensure the image fits within the container */
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .wave-icon {
-  width: 80px; /* Adjust size based on the Wave.png dimensions */
-  height: 80px;
+  width: 70px; /* Adjust size based on the Wave.png dimensions */
+  height: 70px;
   padding-top: 0.3rem;
+  padding-right: 0.3rem;
 }
 
 /* Highlight class for the word "Unlock" */
@@ -81,8 +85,8 @@
   overflow: hidden; /* Hide the text until the animation reveals it */
   display: inline-block;
   width: 0; /* Start with no width */
-  animation: typing 2s steps(48, end) forwards; /* Typing animation */
-  animation-delay: 2s; /* Start after h1 and h2 fade-in */
+  animation: typing 3s steps(48, end) forwards; /* Typing animation */
+  animation-delay: 0.5s; /* Start after h1 and h2 fade-in */
 }
 
 .cursor {
@@ -136,64 +140,141 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* iPad/Tablet */
+  .introduction-section {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .introduction-text {
+    margin-bottom: 16px;
+  }
+
   .introduction-text h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .introduction-text h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
   }
 
   .introduction-text p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .introduction-image {
-    height: 200px;
+    height: 400px; /* Reduced height for tablets */
   }
 
   .wave-icon {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    padding-top: 0.2rem;
+    padding-right: 0.2rem;
   }
 
   .h1-box {
     padding: 8px 16px;
-    margin-bottom: 12px; /* Adjust margin for smaller screens */
+    margin-bottom: 16px;
   }
 
   .cursor {
-    font-size: 1.1rem; /* Match the p font size on smaller screens */
+    font-size: 1.2rem;
   }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) { /* ascendant; /* Tablet */
+  .introduction-section {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .introduction-text {
+    margin-bottom: 12px;
+  }
+
   .introduction-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .introduction-text h2 {
     font-size: 1.2rem;
+    margin-bottom: 12px;
   }
 
   .introduction-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .introduction-image {
-    height: 150px;
+    height: 300px; /* Further reduced height for smaller tablets */
   }
 
   .wave-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
+    padding-top: 0.15rem;
+    padding-right: 0.15rem;
   }
 
   .h1-box {
     padding: 6px 12px;
-    margin-bottom: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 15px;
+  }
+
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .introduction-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .introduction-text {
+    margin-bottom: 8px;
+  }
+
+  .introduction-text h1 {
+    font-size: 0.8rem;
+    padding: auto;
+    margin: 0px;
+  }
+
+  .introduction-text h2 {
+    font-size: 0.66rem;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  .introduction-text p {
+    font-size: 0.6rem;
+  }
+
+  .introduction-image {
+    height: 115px; /* Compact height for mobile */
+  }
+
+  .wave-icon {
+    width: 0px;
+    height: 0px;
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+
+  .h1-box {
+    padding-right: 15.7px;
+    margin-bottom: 6px;
+    max-width: 480px;
   }
 
   
+
 }

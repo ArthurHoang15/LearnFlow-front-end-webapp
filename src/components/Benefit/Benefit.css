@@ -1,154 +1,272 @@
 .benefit-section {
-    padding: 64px 20px;
-    background-color: #f6f6f7;
-    text-align: left; /* Align content to the left */
-    margin-top:1.5rem;
+  padding: 64px 20px;
+  background-color: #f6f6f7;
+  text-align: left; /* Align content to the left */
+  margin-top: 1.5rem;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in; /* Smooth transition for fallback */
+}
+
+.benefit-section.visible {
+  opacity: 1; /* Fully visible when in view */
+  animation: fade-in 1.5s ease-in forwards; /* Apply fade-in animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement for effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00b1fe; /* Blue color for "Benefits" */
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1440px; /* Match the grid width */
+  margin-left: auto; /* Center the content within the max-width */
+  margin-right: auto;
+}
+
+.benefit-subheading {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1440px; /* Match the grid width */
+  margin-left: auto; /* Center the content within the max-width */
+  margin-right: auto;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for the top row */
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Adjust the 4th and 5th cards to be side by side on the same row */
+.benefit-card:nth-child(4),
+.benefit-card:nth-child(5) {
+  grid-column: auto; /* Reset any previous spanning */
+}
+
+.benefit-card:nth-child(4) {
+  grid-column: 1 / 2; /* First column */
+  grid-row: 2; /* Second row */
+}
+
+.benefit-card:nth-child(5) {
+  grid-column: 2 / 3; /* Second column */
+  grid-row: 2; /* Second row */
+}
+
+/* Create a nested grid for the second row (cards 04 and 05) */
+.benefit-row-two {
+  grid-column: 1 / 4; /* Span all 3 columns of the main grid */
+  grid-row: 2; /* Place in the second row */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns (half width each) */
+  gap: 20px; /* Match the gap of the main grid */
+  max-width: 1440px; /* Ensure the width matches the main grid */
+}
+
+.benefit-row-two .benefit-card {
+  grid-column: auto; /* Reset column positioning within the nested grid */
+  grid-row: auto; /* Reset row positioning within the nested grid */
+}
+
+.benefit-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10px;
+}
+
+.benefit-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10px;
+}
+
+.benefit-description {
+  font-size: 1.3rem;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* iPad/Tablet */
+  .benefit-section {
+    padding: 48px 16px;
+    margin-top: 1rem;
   }
 
   .benefit-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #00b1fe; /* Blue color for "Benefits" */
-    margin-bottom: 1rem;
-    font-family: 'Poppins', sans-serif;
-    max-width: 1440px; /* Match the grid width */
-    margin-left: auto; /* Center the content within the max-width */
-    margin-right: auto;
+    font-size: 2.3rem;
+    margin-bottom: 0.8rem;
   }
 
   .benefit-subheading {
     font-size: 1.3rem;
-    color: #666;
-    margin-bottom: 2.5rem;
-    font-family: 'Roboto', sans-serif;
-    max-width: 1440px; /* Match the grid width */
-    margin-left: auto; /* Center the content within the max-width */
-    margin-right: auto;
+    margin-bottom: 2rem;
   }
 
   .benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for the top row */
+    grid-template-columns:1fr; /* 2 columns for iPad */
     gap: 20px;
-    max-width: 1440px;
-    margin: 0 auto;
+  }
+
+  .benefit-row-two {
+    grid-column: auto; /* Reset for mobile */
+    grid-row: auto;
+     /* Move to the third row */
+    grid-template-columns: 1fr; /* Keep 2 columns for the nested grid */
+    gap: 20px;
   }
 
   .benefit-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 20px;
   }
 
-  /* Adjust the 4th and 5th cards to be side by side on the same row */
   .benefit-card:nth-child(4),
   .benefit-card:nth-child(5) {
-    grid-column: auto; /* Reset any previous spanning */
-  }
-
-  .benefit-card:nth-child(4) {
-    grid-column: 1 / 2; /* First column */
-    grid-row: 2; /* Second row */
-  }
-
-  .benefit-card:nth-child(5) {
-    grid-column: 2 / 3; /* Second column */
-    grid-row: 2; /* Second row */
-  }
-
-  /* Create a nested grid for the second row (cards 04 and 05) */
-  .benefit-row-two {
-    grid-column: 1 / 4; /* Span all 3 columns of the main grid */
-    grid-row: 2; /* Place in the second row */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns (half width each) */
-    gap: 20px; /* Match the gap of the main grid */
-    max-width: 1440px; /* Ensure the width matches the main grid */
-  }
-
-  .benefit-row-two .benefit-card {
-    grid-column: auto; /* Reset column positioning within the nested grid */
-    grid-row: auto; /* Reset row positioning within the nested grid */
+    grid-column: auto; /* Reset for nested grid */
+    grid-row: auto; /* Reset for nested grid */
   }
 
   .benefit-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #000;
-    display: block;
-    margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 10px;
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+    margin-left: 8px;
   }
 
   .benefit-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 15px ;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    margin-left: 8px;
   }
 
   .benefit-description {
     font-size: 1.3rem;
-    color: #666;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 10px; 
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablet */
+  .benefit-section {
+    padding: 40px 20px 12px 12px;
+    margin-top: 0.8rem;
   }
 
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .benefit-grid {
-      grid-template-columns: 1fr; /* Stack cards in a single column */
-    }
-
-    .benefit-row-two {
-      grid-column: auto; /* Reset for mobile */
-      grid-row: auto; /* Reset for mobile */
-      grid-template-columns: 1fr; /* Stack cards in a single column on mobile */
-    }
-
-    .benefit-card:nth-child(4),
-    .benefit-card:nth-child(5) {
-      grid-column: auto; /* Reset for mobile */
-      grid-row: auto; /* Reset for mobile */
-    }
-
-    .benefit-heading {
-      font-size: 2rem;
-    }
-
-    .benefit-subheading {
-      font-size: 0.9rem;
-    }
-
-    .benefit-title {
-      font-size: 1.3rem;
-    }
-
-    .benefit-description {
-      font-size: 0.9rem;
-    }
+  .benefit-heading {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
   }
 
-  @media (max-width: 480px) {
-    .benefit-heading {
-      font-size: 1.8rem;
-    }
-
-    .benefit-subheading {
-      font-size: 0.8rem;
-    }
-
-    .benefit-title {
-      font-size: 1.2rem;
-    }
-
-    .benefit-description {
-      font-size: 0.8rem;
-    }
+  .benefit-subheading {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
+
+  .benefit-grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap:17px;
+  }
+
+  .benefit-row-two {
+    grid-column: auto; /* Reset for mobile */
+    grid-row: auto; /* Reset for mobile */
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 17px;
+  }
+
+  .benefit-card {
+    padding: 16px;
+  }
+
+  .benefit-number {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+
+  .benefit-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+
+  .benefit-description {
+    font-size: 1rem;
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .benefit-section {
+    padding: 48px 0px 8px 8px;
+    margin-top: 0.5rem;
+  }
+
+  .benefit-heading {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .benefit-subheading {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-grid {
+    gap: 15px;
+  }
+
+  .benefit-row-two {
+    gap: 15px;
+  }
+
+  .benefit-card {
+    padding: 12px;
+  }
+
+  .benefit-number {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-left: 4px;
+  }
+
+  .benefit-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-left: 4px;
+  }
+
+  .benefit-description {
+    font-size: 0.7rem;
+    margin-left: 4px;
+  }
+}

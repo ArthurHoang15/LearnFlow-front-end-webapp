@@ -1,238 +1,392 @@
 .explore-section {
-    padding: 64px 20px;
-    background-color: #f6f6f7;
-    text-align: left;
-    margin-top: 1.5rem;
+  padding: 64px 20px;
+  background-color: #f6f6f7;
+  text-align: left;
+  margin-top: 1.5rem;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in; /* Smooth transition for fallback */
+}
+
+.explore-section.visible {
+  opacity: 1; /* Fully visible when in view */
+  animation: fade-in 1.5s ease-in forwards; /* Apply fade-in animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement for effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.explore-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00b1fe; /* Blue color for "Explore LearnFlow" */
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explore-subheading {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for each row */
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.explore-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.explore-image {
+  width: 100%;
+  height: 300px; /* Adjust based on the image aspect ratio */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.explore-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%; /* Ensure title takes full width */
+}
+
+.explore-description {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  flex-grow: 1; /* Ensure the description takes up available space */
+  width: 100%; /* Ensure description takes full width */
+}
+
+.explore-button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  color: #00b1fe;
+  background-color: #fff; /* Light blue background */
+  border-color: #00b1fe;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make button match the width of other content */
+  text-align: center; /* Center the text inside the button */
+}
+
+.explore-button:hover {
+  background-color: #e0f0ff; /* Slightly darker on hover */
+}
+
+/* FAQ Section Styles */
+.faq-container {
+  max-width: 1440px;
+  margin: 3rem auto 0; /* Add spacing above the FAQ section */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 56px; /* Add padding inside the box */
+  display: flex;
+  align-items: center; /* Vertically center the children */
+  gap: 20px;
+}
+
+.faq-heading-container {
+  flex: 1; /* Take up 1/3 of the width */
+}
+
+.faq-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-subheading {
+  font-size: 1.3rem;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+}
+
+.faq-list {
+  flex: 1; /* Take up 1/2 of the width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-accordion {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.faq-question {
+  font-size: 1.3rem!important;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-answer {
+  font-size: 1.3rem!important;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+.faq-accordion .MuiAccordionSummary-expandIconWrapper {
+  color: #00b1fe; /* Blue color for the expand icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* iPad/Tablet */
+  .explore-section {
+    padding: 48px 16px;
+    margin-top: 1rem;
   }
 
   .explore-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #00b1fe; /* Blue color for "Explore LearnFlow" */
-    margin-bottom: 1rem;
-    font-family: 'Poppins', sans-serif;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 2.3rem;
+    margin-bottom: 0.8rem;
   }
 
   .explore-subheading {
     font-size: 1.3rem;
-    color: #666;
-    margin-bottom: 2rem;
-    font-family: 'Roboto', sans-serif;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1.5rem;
   }
 
   .explore-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for each row */
-    gap: 20px;
-    max-width: 1440px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns for iPad */
+    gap: 16px;
   }
 
   .explore-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 24px;
   }
 
   .explore-image {
-    width: 100%;
-    height: 300px; /* Adjust based on the image aspect ratio */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    height: 250px; /* Reduced height for tablets */
   }
 
   .explore-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
-    width: 100%; /* Ensure title takes full width */
+    font-size: 1.8rem;
+    margin-bottom: 12px;
   }
 
   .explore-description {
-    font-size: 1.3rem;
-    color: #666;
-    margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
-    flex-grow: 1; /* Ensure the description takes up available space */
-    width: 100%; /* Ensure description takes full width */
+    font-size: 1.33rem;
+    margin-bottom: 16px;
   }
 
   .explore-button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
-    color: #00b1fe;
-    background-color: #fff; /* Light blue background */
-    border-color: #00b1fe;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Make button match the width of other content */
-    text-align: center; /* Center the text inside the button */
   }
 
-  .explore-button:hover {
-    background-color: #e0f0ff; /* Slightly darker on hover */
-  }
-
-  /* FAQ Section Styles */
   .faq-container {
-    max-width: 1440px;
-    margin: 3rem auto 0; /* Add spacing above the FAQ section */
-    background-color: #fff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 56px; /* Add padding inside the box */
-    display: flex;
-    align-items: center; /* Vertically center the children */
-    gap: 20px;
-  }
-
-  .faq-heading-container {
-    flex: 1; /* Take up 1/3 of the width */
+    padding: 40px;
+    gap: 16px;
   }
 
   .faq-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
   }
 
   .faq-subheading {
     font-size: 1.3rem;
-    color: #666;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 00;
   }
 
   .faq-list {
-    flex: 1; /* Take up 1/22 of the width */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .faq-accordion {
-    border-radius: 8px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    gap: 16px;
   }
 
   .faq-question {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem!important;
   }
 
   .faq-answer {
-    font-size: 1.3rem;
-    color: #666;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem!important;
+  }
+}
+
+@media (max-width: 768px){
+  .explore-section {
+    padding: 40px 12px;
+    margin-top: 0.8rem;
   }
 
-  .faq-accordion .MuiAccordionSummary-expandIconWrapper {
-    color: #00b1fe; /* Blue color for the expand icon */
+  .explore-heading {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .explore-grid {
-      grid-template-columns: 1fr; /* Stack cards in a single column */
-    }
-
-    .explore-heading {
-      font-size: 2rem;
-    }
-
-    .explore-subheading {
-      font-size: 0.9rem;
-    }
-
-    .explore-title {
-      font-size: 1.3rem;
-    }
-
-    .explore-description {
-      font-size: 0.9rem;
-    }
-
-    .explore-image {
-      height: 150px; /* Adjust image height for smaller screens */
-    }
-
-    .faq-container {
-      flex-direction: column;
-      align-items: flex-start; /* Reset to top alignment for mobile */
-      gap: 20px;
-    }
-
-    .faq-heading-container {
-      flex: none; /* Reset flex for mobile */
-    }
-
-    .faq-list {
-      flex: none; /* Reset flex for mobile */
-    }
+  .explore-subheading {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
   }
 
-  @media (max-width: 480px) {
-    .explore-heading {
-      font-size: 1.8rem;
-    }
-
-    .explore-subheading {
-      font-size: 0.8rem;
-    }
-
-    .explore-title {
-      font-size: 1.2rem;
-    }
-
-    .explore-description {
-      font-size: 0.8rem;
-    }
-
-    .explore-image {
-      height: 120px; /* Further adjust for very small screens */
-    }
-
-    .explore-button {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
-
-    .faq-heading {
-      font-size: 1.8rem;
-    }
-
-    .faq-subheading {
-      font-size: 0.8rem;
-    }
-
-    .faq-question {
-      font-size: 0.9rem;
-    }
-
-    .faq-answer {
-      font-size: 0.8rem;
-    }
+  .explore-grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 17px;
   }
+
+  .explore-card {
+    padding: 20px;
+  }
+
+  .explore-image {
+    height: 200px; /* Further reduced height for smaller tablets */
+  }
+
+  .explore-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .explore-description {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .explore-button {
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    align-items: flex-start; /* Reset to top alignment for mobile */
+    padding: 32px;
+    gap: 12px;
+  }
+
+  .faq-heading-container {
+    flex: none; /* Reset flex for mobile */
+  }
+
+  .faq-list {
+    flex: none; /* Reset flex for mobile */
+    gap: 12px;
+  }
+
+  .faq-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .faq-subheading {
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1rem!important;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .explore-section {
+    padding: 32px 8px;
+    margin-top: 0.5rem;
+  }
+
+  .explore-heading {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .explore-subheading {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .explore-grid {
+    gap: 15px;
+  }
+
+  .explore-card {
+    padding: 16px;
+  }
+
+  .explore-image {
+    height: 150px; /* Compact height for mobile */
+  }
+
+  .explore-title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .explore-description {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+
+  .explore-button {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+
+  .faq-container {
+    padding: 24px;
+    gap: 8px;
+  }
+
+  .faq-list {
+    gap: 8px;
+  }
+
+  .faq-heading {
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+  }
+
+  .faq-subheading {
+    font-size: 0.8rem;
+  }
+
+  .faq-question {
+    font-size: 0.8rem!important;
+  }
+
+  .faq-answer {
+    font-size: 0.8rem!important;
+  }
+}

@@ -1,0 +1,280 @@
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px; 
+  padding-top: 32px;
+  padding-left: 20px; /* Space between text and image */
+  padding-right: 20px; /* Space between text and image */
+  background-color: #f6f6f7; /* White background for the text section */
+}
+
+.introduction-text {
+  text-align: center;
+  color: #000;
+  max-width: 1440px;
+  margin-bottom: 20px; /* Space between text and image */
+}
+
+.h1-box {
+  background-color: #fff; /* White background for the box */
+  padding: 10px 20px; /* Padding inside the box */
+  border-radius: 8px; /* Slight border-radius for a modern look */
+  display: inline-block; /* Fit the box to the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px; /* Add margin to create space between the box and h2 */
+}
+
+.introduction-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center; /* Align the wave icon and text vertically */
+  gap: 8px; /* Space between the wave icon and text */
+  margin: 10px; /* Remove default margin to fit nicely in the box */
+}
+
+.introduction-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.introduction-text p {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; /* Needed for the typing animation */
+  margin: 0; /* Remove default margin to control spacing with the typing div */
+}
+
+.introduction-image {
+  width: 100%;
+  max-width: 1440px; /* Limit the width to match the design */
+  height: 500px; /* Adjust height based on the image's aspect ratio */
+  background-size: cover; /* Ensure the image fits within the container */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wave-icon {
+  width: 70px; /* Adjust size based on the Wave.png dimensions */
+  height: 70px;
+  padding-top: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+/* Highlight class for the word "Unlock" */
+.highlight {
+  color: #00b1fe; /* Blue color for "Unlock" */
+}
+
+/* Typing animation for the p element */
+.typing {
+  display: flex;
+  flex-direction: column; /* Stack the text and cursor vertically */
+  align-items: center; /* Center the text and cursor */
+  opacity: 0; /* Start with the entire typing section hidden */
+  animation: reveal 0s forwards; /* Instantly reveal the section after delay */
+  animation-delay: 2s; /* Wait for h1 and h2 to finish fading in */
+}
+
+.typing-text {
+  white-space: nowrap; /* Prevent text wrapping during animation */
+  overflow: hidden; /* Hide the text until the animation reveals it */
+  display: inline-block;
+  width: 0; /* Start with no width */
+  animation: typing 3s steps(48, end) forwards; /* Typing animation */
+  animation-delay: 0.5s; /* Start after h1 and h2 fade-in */
+}
+
+.cursor {
+  display: block; /* Move the cursor to a new line */
+  font-size: 1.3rem; /* Match the p font size */
+  color: #00b1fe; /* Blue cursor to match the theme */
+  line-height: 1; /* Prevent extra spacing */
+  animation: blink 0.7s step-end 6; /* Blink 6 times (approx. 2s of typing) */
+  animation-delay: 2s; /* Start blinking after h1 and h2 fade-in */
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* iPad/Tablet */
+  .introduction-section {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .introduction-text {
+    margin-bottom: 16px;
+  }
+
+  .introduction-text h1 {
+    font-size: 2rem;
+  }
+
+  .introduction-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .introduction-text p {
+    font-size: 1.3rem;
+  }
+
+  .introduction-image {
+    height: 400px; /* Reduced height for tablets */
+  }
+
+  .wave-icon {
+    width: 50px;
+    height: 50px;
+    padding-top: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .h1-box {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+  }
+
+  .cursor {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 768px) { /* ascendant; /* Tablet */
+  .introduction-section {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .introduction-text {
+    margin-bottom: 12px;
+  }
+
+  .introduction-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .introduction-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .introduction-text p {
+    font-size: 1rem;
+  }
+
+  .introduction-image {
+    height: 300px; /* Further reduced height for smaller tablets */
+  }
+
+  .wave-icon {
+    width: 40px;
+    height: 40px;
+    padding-top: 0.15rem;
+    padding-right: 0.15rem;
+  }
+
+  .h1-box {
+    padding: 6px 12px;
+    margin-bottom: 15px;
+  }
+
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .introduction-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .introduction-text {
+    margin-bottom: 8px;
+  }
+
+  .introduction-text h1 {
+    font-size: 0.8rem;
+    padding: auto;
+    margin: 0px;
+  }
+
+  .introduction-text h2 {
+    font-size: 0.66rem;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  .introduction-text p {
+    font-size: 0.6rem;
+  }
+
+  .introduction-image {
+    height: 115px; /* Compact height for mobile */
+  }
+
+  .wave-icon {
+    width: 0px;
+    height: 0px;
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+
+  .h1-box {
+    padding-right: 15.7px;
+    margin-bottom: 6px;
+    max-width: 480px;
+  }
+
+  
+
+}

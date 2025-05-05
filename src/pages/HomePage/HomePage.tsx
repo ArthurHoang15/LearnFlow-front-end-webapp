@@ -1,8 +1,12 @@
+import {IntroductionSection} from '../../components/Introduction/Introduction.tsx';
+import {BenefitSection} from '../../components/Benefit/Benefit.tsx';
+import {ExploreSection} from '../../components/Explore/Explore.tsx';
 export const HomePage = () => {
   return (
     <div>
-      <h1>Trang chủ</h1>
-      <p>Chào mừng đến với LearnFlow!</p>
+      <IntroductionSection />
+      <BenefitSection />
+      <ExploreSection />
     </div>
   );
 };

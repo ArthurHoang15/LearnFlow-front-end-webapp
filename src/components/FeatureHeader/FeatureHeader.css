@@ -22,7 +22,8 @@
     width: 50%;
     font-size: 1rem;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.75;
     word-wrap: break-word; 
     text-align: left;
+    white-space: pre-line;
   }

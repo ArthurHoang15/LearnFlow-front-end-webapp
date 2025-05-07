@@ -1,0 +1,24 @@
+{
+  "featureHeaders": [
+    {
+      "id": 1,
+      "headerName": "Learning Hub",
+      "headerDescription": "Explore our diverse learning resources designed to enhance your English skills through interactive lessons and practice exercises."
+    },
+    {
+      "id": 2,
+      "headerName": "Smart Learning",
+      "headerDescription": "Personalized learning paths that adapt to your skill level and learning style for maximum efficiency."
+    },
+    {
+      "id": 3,
+      "headerName": "Practice Zone",
+      "headerDescription": "Master grammar and vocabulary with interactive exercises that provide instant feedback."
+    },
+    {
+      "id": 4,
+      "headerName": "Community Hub",
+      "headerDescription": "Connect with fellow learners, participate in discussions, and practice your language skills in a supportive environment."
+    }
+  ]
+}

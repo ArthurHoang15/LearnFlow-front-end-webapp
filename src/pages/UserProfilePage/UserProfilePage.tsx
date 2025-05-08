@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Box, Avatar, TextField, Button } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import { AvatarCropModal } from '../../components/AvatarCropModal/AvatarCropModal';
 import './UserProfilePage.css';
 
 export const UserProfilePage: React.FC = () => {
@@ -11,13 +12,34 @@ export const UserProfilePage: React.FC = () => {
   const [address, setAddress] = useState<string>('Somewhere in the world');
 
   const [avatarUrl, setAvatarUrl] = useState<string>("https://via.placeholder.com/100");
+  const [tempImageUrl, setTempImageUrl] = useState<string>("");
+  const [cropModalOpen, setCropModalOpen] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedAvatar = localStorage.getItem('userAvatar');
+    if (savedAvatar) {
+      setAvatarUrl(savedAvatar);
+    }
+  }, []);
 
   const handleAvatarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      // Create a temporary URL for cropping
       const imageUrl = URL.createObjectURL(file);
-      setAvatarUrl(imageUrl);
+      setTempImageUrl(imageUrl);
+      setCropModalOpen(true);
+    }
+  };
+
+  const handleCropComplete = (croppedImageUrl: string) => {
+    setAvatarUrl(croppedImageUrl);
+    localStorage.setItem('userAvatar', croppedImageUrl);
+    
+    if (tempImageUrl) {
+      URL.revokeObjectURL(tempImageUrl);
+      setTempImageUrl("");
     }
   };
 
@@ -57,42 +79,44 @@ export const UserProfilePage: React.FC = () => {
     };
   };
 
+  
+
   return (
     <div className="profile-container">
-        <div className="left-column">
-            <div className="avatar-section">
-                <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept="image/*"
-                    onChange={handleAvatarChange}
-                    style={{ display: 'none' }}
-                />
-            
-                <div className="avatar-container" onClick={triggerFileInput}>
-                    <Avatar 
-                    src={avatarUrl} 
-                    alt="User Avatar" 
-                    sx={{ 
-                        width: 200, 
-                        height: 200,
-                        cursor: 'pointer',
-                        '&:hover': {
-                        opacity: 0.8,
-                        }
-                    }} 
-                    />
-                    <div className="avatar-overlay">
-                        <EditIcon color="action" />
-                        <p className="avatar-hint">Click to change avatar</p>
-                    </div>               
-            </div>
-            
+      <div className="left-column">
+        <div className="avatar-section">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleAvatarChange}
+            style={{ display: 'none' }}
+          />
+        
+          <div className="avatar-container" onClick={triggerFileInput}>
+            <Avatar 
+              src={avatarUrl} 
+              alt="User Avatar" 
+              sx={{ 
+                width: 200, 
+                height: 200,
+                cursor: 'pointer',
+                '&:hover': {
+                  opacity: 0.8,
+                }
+              }} 
+            />
+            <div className="avatar-overlay">
+              <EditIcon color="action" />
+              <p className="avatar-hint">Click to change avatar</p>
+            </div>               
+          </div>
         </div>
-            <div className="achievement-section">
-                <h2 className="achievement-title">Achievements</h2>
-            </div>
+        <div className="achievement-section">
+          <h2 className="achievement-title">Achievements</h2>
         </div>
+      </div>
+      
       <Box className="form-section">
         <TextField
           label="Full Name"
@@ -173,6 +197,14 @@ export const UserProfilePage: React.FC = () => {
           </Button>
         </Box>
       </Box>
+      
+      {/* Crop Modal */}
+      <AvatarCropModal
+        open={cropModalOpen}
+        onClose={() => setCropModalOpen(false)}
+        imageUrl={tempImageUrl}
+        onCropComplete={handleCropComplete}
+      />
     </div>
   );
 };

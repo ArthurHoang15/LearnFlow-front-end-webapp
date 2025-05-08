@@ -1,0 +1,148 @@
+.signup-page {
+    display: flex;
+    min-height: 80vh;
+    background-color: #f6f6f7; /* Light gray background */
+    max-width: 1440px;
+    margin: auto;
+  }
+  
+  .signup-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Light blue background for image section */
+    position: relative; /* Ensure proper positioning for child */
+    height:80vh;
+    border-radius:10px
+  }
+  
+  .signup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    position: absolute;
+    border-radius:10px;
+  }
+  
+  .signup-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    background-color: #fff; /* White background for form section */
+    height: 80vh;
+    
+  }
+  
+  .signup-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #00b1fe; /* Blue color to match theme */
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 450px;
+  
+  }
+  
+  .signup-button {
+    background-color: #00b1fe !important; /* Blue button */
+    color: #fff !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 0.75rem !important;
+    border-radius: 5px !important;
+  }
+  
+  .signup-button:hover {
+    background-color: #0088cc !important; /* Darker blue on hover */
+  }
+  
+  .signup-login-link {
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+  }
+  
+  .signup-login-link a {
+    color: #00b1fe;
+    text-decoration: none;
+  }
+  
+  .signup-login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) { /* Tablet */
+    .signup-page {
+      flex-direction: column;
+    }
+  
+    .signup-image-container {
+      width: 100%;
+      padding: 2rem 0;
+      min-height: auto; /* Remove min-height on tablet to stack naturally */
+    }
+  
+    .signup-image {
+      width: 60%;
+      height: auto;
+      position: static; /* Reset position for stacking */
+      object-fit: contain; /* Adjust to contain within the smaller space */
+      max-height: 400px; /* Limit height on tablet */
+    }
+  
+    .signup-form-container {
+      width: 100%;
+      padding: 1.5rem;
+    }
+  
+    .signup-title {
+      font-size: 1.8rem;
+    }
+  
+    .signup-form {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .signup-image-container {
+      padding: 1rem 0;
+    }
+  
+    .signup-image {
+      width: 70%;
+      height: auto;
+      max-width: 300px;
+      max-height: 300px;
+    }
+  
+    .signup-form-container {
+      padding: 1rem;
+    }
+  
+    .signup-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .signup-form {
+      max-width: 100%;
+    }
+  
+    .signup-button {
+      padding: 0.5rem !important;
+      font-size: 0.9rem !important;
+    }
+  
+    .signup-login-link {
+      font-size: 0.85rem;
+    }
+  }

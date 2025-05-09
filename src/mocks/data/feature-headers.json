@@ -1,0 +1,34 @@
+{
+  "featureHeaders": [
+    {
+      "id": 1,
+      "headerName": "Learning Hub",
+      "headerDescription": "Welcome to Your Learning Hub!\nDive into interactive chapters, boost your vocabulary, explore engaging stories, and review your mistakes — all in one seamless experience. \nLearn at your pace, track your progress, and enjoy every step of your English journey with LearnFlow."
+    },
+    {
+      "id": 2,
+      "headerName": "Smart Learning",
+      "headerDescription": "Master English with Interactive Lessons and Guided Practice! \nSmart Learning breaks down your English journey into easy-to-follow chapters and interactive lessons. \nPractice with fill-in-the-blank exercises, track your progress, and get instant feedback to improve faster and smarter — one lesson at a time."
+    },
+    {
+      "id": 3,
+      "headerName": "Vocabulary Boost",
+      "headerDescription": "Expand Your Vocabulary with Smart Flashcards and Thematic Word Lists! \nVocabulary Boost helps you master new words through topic-based collections, interactive flashcards with pronunciation guides, English-Vietnamese translations, and real-life usage examples. \nEasily search for themes you love and build your word power with confidence."
+    },
+    {
+      "id": 4,
+      "headerName": "Stories Flow",
+      "headerDescription": "Stories Flow, a unique feature of the LearnFlow learning platform, delivers captivating and interactive stories designed to inspire and enhance the learning experience, enabling users to absorb knowledge naturally and engagingly through real-life scenarios, vivid characters, and personalized content tailored to individual learning needs."
+    },
+    {
+      "id": 5,
+      "headerName": "Mistake Tracker",
+      "headerDescription": "Turn Mistakes into Progress with Smart Review Tools! \nMistake Tracker automatically collects your incorrect answers from lessons and helps you understand why you got them wrong. \nWith detailed explanations, review status toggles, and easy filtering, you can revisit, reflect, and improve — one mistake at a time."
+    },
+    {
+      "id": 6,
+      "headerName": "About LearnFlow",
+      "headerDescription": "Welcome to LearnFlow – the interactive English learning platform designed to make your journey smarter, more engaging, and truly personalized! \nWe combine guided lessons, vocabulary flashcards, real-world stories, and mistake review tools into one seamless experience to help you build lasting language skills. \nWith features tailored for progress tracking and social learning, LearnFlow empowers you to grow your English every day — at your own pace, in your own style."
+    }
+  ]
+}

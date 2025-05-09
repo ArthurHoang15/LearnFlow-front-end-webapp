@@ -4,7 +4,6 @@ import { FeatureHeader } from '../../components/FeatureHeader/FeatureHeader';
 import { Chapters, Mistakes, Stories, Vocab } from '../../assets/images/index.ts';
 import moduleData from '../../mocks/data/learning-module-content.json';
 
-// Interface cho module data
 interface ModuleData {
   id: number;
   header: string;
@@ -17,7 +16,6 @@ interface ModuleData {
 export const LearningHub = () => {
   const [modules, setModules] = useState<ModuleData[]>([]);
   
-  // Object ánh xạ imageKey từ JSON sang URL thực tế
   const imageMap = {
     Chapters,
     Mistakes,

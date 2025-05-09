@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       },
       // Thêm các route khác tại đây
       {
-        path: '/signup',
+        path: 'signup',
         element: <SignUpPage />,
       }
     ],

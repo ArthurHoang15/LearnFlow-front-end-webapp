@@ -66,6 +66,7 @@ export const SignUpPage = () => {
             margin="normal"
             required
           />
+
           <Button
             type="submit"
             variant="contained"

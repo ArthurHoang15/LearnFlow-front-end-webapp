@@ -11,10 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff; /* Light blue background for image section */
+    background-color: #f6f6f7;  
     position: relative; /* Ensure proper positioning for child */
     height:80vh;
-    border-radius:10px
+    border-radius: 0px 10px 10px 0px; 
   }
   
   .signup-image {
@@ -22,7 +22,7 @@
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
     position: absolute;
-    border-radius:10px;
+    border-radius: 0px; /* Rounded corners for the image */
   }
   
   .signup-form-container {
@@ -33,7 +33,10 @@
     align-items: center;
     padding: 0rem;
     background-color: #fff; /* White background for form section */
-    height: 80vh;
+    height: 77.6vh;
+    border-radius: 0px 10px 10px 0px; 
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    margin-top: 0.45rem; /* Padding for the form container */
     
   }
   

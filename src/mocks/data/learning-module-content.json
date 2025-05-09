@@ -1,0 +1,36 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "header": "Smart Learning",
+      "subheader": "Learn English Step-by-Step",
+      "description": "Follow structured chapters with interactive lessons like fill-in-the-blank, drag-and-drop, and instant feedback to build grammar and sentence skills",
+      "buttonText": "Start Learning",
+      "imageKey": "Chapters"
+    },
+    {
+      "id": 2,
+      "header": "Vocabulary Boost",
+      "subheader": "Master Words with Flashcards",
+      "description": " Explore vocabulary by topic with searchable lists. Flip flashcards to see phonetics, examples, and translations. Hear native pronunciation for better retention.",
+      "buttonText": "Explore Topics",
+      "imageKey": "Vocab"
+    },
+    {
+      "id": 3,
+      "header": "Stories Flow",
+      "subheader": "Read & Learn from Real Stories",
+      "description": "Browse stories by topic or summary. Tap any word to get meaning, phonetics (US/UK), and word type—all in English. Perfect for immersive reading.",
+      "buttonText": "Explore Stories",
+      "imageKey": "Stories"
+    },
+    {
+      "id": 4,
+      "header": "Mistake Tracker",
+      "subheader": "Review & Fix Your Errors",
+      "description": "Automatically saves your mistakes from lessons. Get explanations, mark as reviewed or not, and turn errors into progress.",
+      "buttonText": "Check Mistakes",
+      "imageKey": "Mistakes"
+    }
+  ]
+}

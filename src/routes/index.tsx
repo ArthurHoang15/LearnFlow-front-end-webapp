@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
-// import { LearningHub } from '../pages/LearningHub/LearningHub';
+import { LearningHub } from '../pages/LearningHub/LearningHub';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 
 const router = createBrowserRouter([
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        // path: 'learning-hub',
-        // element: <LearningHub />,
+        path: 'learning-hub',
+        element: <LearningHub />
       },
       // {
       //   path: 'chat',

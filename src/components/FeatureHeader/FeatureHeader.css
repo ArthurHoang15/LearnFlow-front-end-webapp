@@ -1,0 +1,42 @@
+.feature-header {
+    width: 100%;
+    max-width: 1440px; 
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    font-family: poppins, sans-serif;
+    color: black;
+}
+  
+.header-name {
+    width: 42%; 
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    padding-left: 3rem; 
+}
+  
+.header-description {
+    width: 45%; 
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.75;
+    word-wrap: break-word; 
+    text-align: left;
+    white-space: pre-line;
+    padding-right: 3rem; 
+}
+
+@media (max-width: 768px) {
+    .feature-header {
+        flex-direction: column;
+    }
+    
+    .header-name,
+    .header-description {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+}

@@ -3,8 +3,8 @@ import './FeatureHeader.css';
 import featureHeadersData from '../../mocks/data/feature-headers.json';
 
 interface FeatureHeaderProps {
-  headerId?: number; // Optional ID để chọn header cụ thể từ JSON
-  headerName?: string; // Optional headerName để chọn header cụ thể từ JSON
+  headerId?: number; 
+  headerName?: string; 
 }
 
 interface FeatureHeaderData {
@@ -19,14 +19,12 @@ export const FeatureHeader: React.FC<FeatureHeaderProps> = ({ headerId, headerNa
   useEffect(() => {
     let selectedHeader;
     
-    // Tìm header dựa vào headerName (ưu tiên)
     if (headerName) {
       selectedHeader = featureHeadersData.featureHeaders.find(
         header => header.headerName.toLowerCase() === headerName.toLowerCase()
       );
     }
     
-    // Nếu không tìm thấy theo headerName hoặc không có headerName, thử tìm theo headerId
     if (!selectedHeader && headerId) {
       selectedHeader = featureHeadersData.featureHeaders.find(
         header => header.id === headerId
@@ -36,7 +34,6 @@ export const FeatureHeader: React.FC<FeatureHeaderProps> = ({ headerId, headerNa
     if (selectedHeader) {
       setHeaderData(selectedHeader);
     } else {
-      // Fallback nếu không tìm thấy - dùng header đầu tiên
       setHeaderData(featureHeadersData.featureHeaders[0]);
     }
   }, [headerId, headerName]);

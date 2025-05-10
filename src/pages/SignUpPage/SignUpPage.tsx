@@ -109,7 +109,7 @@ export const SignUpPage = () => {
               />
             }
             label="I agree with Terms of Use and Privacy Policy"
-            sx={{ mt: 1, mb: 1}}
+            sx={{ mt: 1, mb: 1  }}
           />
           <Button
             type="submit"

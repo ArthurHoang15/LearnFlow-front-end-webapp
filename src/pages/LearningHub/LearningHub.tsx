@@ -3,6 +3,7 @@ import { LearningModule } from '../../components/LearningModule/LearningModule.t
 import { FeatureHeader } from '../../components/FeatureHeader/FeatureHeader';
 import { Chapters, Mistakes, Stories, Vocab } from '../../assets/images/index.ts';
 import moduleData from '../../mocks/data/learning-module-content.json';
+import { AboutUs } from '../../components/AboutUs';
 
 interface ModuleData {
   id: number;

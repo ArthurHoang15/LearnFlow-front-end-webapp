@@ -52,6 +52,9 @@ export const SignUpPage = () => {
         <Typography variant="h4" component="h1" className="signup-title">
           Sign Up
         </Typography>
+        <Typography variant="body2" className="signup-subtitle">
+          Create an account to unlock exclusive features
+        </Typography>
         <form onSubmit={handleSubmit} className="signup-form">
           <TextField
             label="Full Name"

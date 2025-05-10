@@ -1,0 +1,47 @@
+.chapter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .content-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .content-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .lesson-card {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 2px solid #00aaff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lesson-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .lesson-description {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+  .rating {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .star-filled {
+    color: #00aaff;
+  }
+  
+  .star-empty {
+    color: #ccc;
+  }

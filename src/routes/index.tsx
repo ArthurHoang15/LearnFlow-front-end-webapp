@@ -3,6 +3,7 @@ import App from '../App';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
+import { SmartLearningPage } from '../pages/SmartLearningPage';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       //   path: 'login',
       //   element: <LoginPage />,
       // },
+      {
+        path: 'learning-hub/smart-learning',
+        element: <SmartLearningPage />, 
+      }
       // Thêm các route khác tại đây
     ],
   },

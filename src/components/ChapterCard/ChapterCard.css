@@ -1,0 +1,24 @@
+.chapter-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 2px solid #00aaff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chapter-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .chapter-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .lock-icon {
+    margin-left: auto;
+  }

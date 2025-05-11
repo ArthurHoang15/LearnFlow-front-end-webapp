@@ -3,6 +3,7 @@ import App from '../App';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
+import Vocab from '../pages/Vocab/Vocab';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,12 @@ const router = createBrowserRouter([
       //   path: 'login',
       //   element: <LoginPage />,
       // },
+      {
+        path: '/learning-hub/vocabulary-boost',
+        element: <Vocab />,
+      }
       // Thêm các route khác tại đây
+      
     ],
   },
 ]);

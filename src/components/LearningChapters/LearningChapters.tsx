@@ -12,14 +12,14 @@ const LearningChapters: React.FC = () => {
   ];
 
   const lessons = [
-    { id: 1, title: 'Lesson1: Saying how you are', description: 'Talk about how you feel', rating: 4 },
-    { id: 2, title: 'Lesson1: Saying how you are', description: '', rating: 5 },
-    { id: 3, title: 'Lesson1: Saying how you are', description: '', rating: 4 },
+    { id: 1, title: 'Lesson 1: Saying how you are', description: 'Talk about how you feel', rating: 4 },
+    { id: 2, title: 'Lesson 1: Saying how you are', description: '', rating: 5 },
+    { id: 3, title: 'Lesson 1: Saying how you are', description: '', rating: 4 },
   ];
 
   return (
     <Box className="learning-container">
-      <Box className="sidebar">
+      <div className="sidebar">
         {chapters.map((chapter) => (
           <ChapterCard
             key={chapter.id}
@@ -28,7 +28,7 @@ const LearningChapters: React.FC = () => {
             locked={chapter.locked}
           />
         ))}
-      </Box>
+      </div>
       <Box className="content-area">
         <ChapterContent chapter={chapters[0]} lessons={lessons} />
       </Box>

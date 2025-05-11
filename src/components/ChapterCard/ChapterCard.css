@@ -1,14 +1,33 @@
 .chapter-card {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    width: 60%;
+    height: 100%;
+    max-height: 120px;
+    gap: 2rem;
     padding: 1rem;
     background-color: white;
     border-radius: 0.5rem;
-    border: 2px solid #00aaff;
+    border: 2px solid #cfcfcf;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .chapter-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .chapter-card.selected {
+    border-color: #00aaff;
   }
   
+  .chapter-card.locked {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
   .chapter-title {
     font-size: 1.5rem;
     font-weight: 700;

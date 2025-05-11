@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Vocab.css';
 import featureHeadersData from '../../mocks/data/feature-headers.json';
+import { useNavigate } from 'react-router-dom';
 
 interface FeatureHeader {
   id: number;
@@ -15,13 +16,13 @@ interface FeatureHeadersData {
 const featureHeaders = featureHeadersData as FeatureHeadersData;
 
 const Vocab = () => {
-  // Use map to find the vocabData with id: 3, taking the first match
+  const navigate = useNavigate();
   const vocabDataArray = featureHeaders.featureHeaders.map(header => {
     if (header.id === 3) return header;
     return null;
   }).filter(item => item !== null) as FeatureHeader[];
 
-  const vocabData = vocabDataArray[0]; // Take the first (and only) matching item
+  const vocabData = vocabDataArray[0];
 
   const allTopics = [
     'Animals',
@@ -90,7 +91,7 @@ const Vocab = () => {
         <div className="topics-grid">
           {filteredTopics.length > 0 ? (
             filteredTopics.map((topic, index) => (
-              <div key={index} className="topic-card">
+              <div key={index} className="topic-card" onClick={() => navigate(`/flashcard/${topic}`)}>
                 <h3 className="topic-name">{topic}</h3>
               </div>
             ))

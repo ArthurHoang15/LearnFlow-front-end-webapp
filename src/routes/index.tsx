@@ -4,7 +4,7 @@ import { HomePage } from '../pages/HomePage/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
 import Vocab from '../pages/Vocab/Vocab';
-
+import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -38,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: '/learning-hub/vocabulary-boost',
         element: <Vocab />,
+      },
+
+      {
+        path: '/flashcard/:topic',
+        element: <FlashCardPage />,
       }
       // Thêm các route khác tại đây
       

@@ -5,6 +5,7 @@ import { SignUpPage } from '../pages/SignUpPage/SignUpPage';
 import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
+import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -18,16 +19,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'learning-hub',
-        element: <LearningHub />,
+        element: <LearningHub />
       },
       // {
       //   path: 'chat',
       //   element: <ChatPage />,
       // },
-      // {
-      //   path: 'profile',
-      //   element: <ProfilePage />,
-      // },
+      {
+        path: 'profile',
+        element: <UserProfilePage />,
+      },
       // {
       //   path: 'signup',
       //   element: <SignUpPage />,

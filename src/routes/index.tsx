@@ -1,8 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from '../App';
 import { HomePage } from '../pages/HomePage/HomePage';
+import { SignUpPage } from '../pages/SignUpPage/SignUpPage';
+import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
+import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 
 const router = createBrowserRouter([
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'learning-hub',
-        element: <LearningHub />,
+        element: <LearningHub />
       },
       {
         path: 'about-us',
@@ -27,19 +30,23 @@ const router = createBrowserRouter([
       //   path: 'chat',
       //   element: <ChatPage />,
       // },
-      // {
-      //   path: 'profile',
-      //   element: <ProfilePage />,
-      // },
+      {
+        path: 'profile',
+        element: <UserProfilePage />,
+      },
       // {
       //   path: 'signup',
       //   element: <SignUpPage />,
       // },
-      // {
-      //   path: 'login',
-      //   element: <LoginPage />,
-      // },
+      {
+      path: 'login',
+      element: <LoginPage />,
+      },
       // Thêm các route khác tại đây
+      {
+        path: 'signup',
+        element: <SignUpPage />,
+      }
     ],
   },
 ]);

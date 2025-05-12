@@ -5,6 +5,7 @@ import { SignUpPage } from '../pages/SignUpPage/SignUpPage';
 import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
+import { SmartLearningPage } from '../pages/SmartLearningPage';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         element: <LearningHub />
       },
       {
+        path: 'learning-hub/smart-learning',
+        element: <SmartLearningPage />, 
+      },
+      {
         path: 'about-us',
         element: <AboutUsPage />,
       },
@@ -34,19 +39,15 @@ const router = createBrowserRouter([
         path: 'profile',
         element: <UserProfilePage />,
       },
-      // {
-      //   path: 'signup',
-      //   element: <SignUpPage />,
-      // },
-      {
-      path: 'login',
-      element: <LoginPage />,
-      },
-      // Thêm các route khác tại đây
       {
         path: 'signup',
         element: <SignUpPage />,
-      }
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
+      },   
+      // Thêm các route khác tại đây
     ],
   },
 ]);

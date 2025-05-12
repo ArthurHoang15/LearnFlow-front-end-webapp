@@ -5,6 +5,7 @@
   background: #f6f6f7;
   font-family: 'Inter', Arial, sans-serif;
   color: #222;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .aboutus-header h1 {
@@ -44,6 +45,8 @@
   align-items: flex-start;
   gap: 100px;
   margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .aboutus-section-row:first-child .aboutus-section-title {
@@ -94,10 +97,28 @@
   min-height: 210px;
   transition: box-shadow 0.2s;
   text-align: left;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .aboutus-goal-card:hover {
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.aboutus-goal-card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.aboutus-goal-card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.aboutus-goal-card:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.aboutus-goal-card:nth-child(4) {
+  animation-delay: 1.2s;
 }
 
 .aboutus-goal-icon {
@@ -135,6 +156,9 @@
   width: 100%;
   overflow: hidden;
   background: #fff;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 1.4s;
 }
 
 .aboutus-together-card::before {
@@ -253,6 +277,7 @@
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
+  animation-delay: 0.4s;
 }
 .aboutus-section-row.goals .aboutus-section-title {
   margin-top: 18px;
@@ -294,4 +319,43 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutus-section-row:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.aboutus-section-row.goals {
+  animation-delay: 0.4s;
+}
+
+.aboutus-goal-card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.aboutus-goal-card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.aboutus-goal-card:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.aboutus-goal-card:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.aboutus-together-card {
+  animation-delay: 1.4s;
 } 

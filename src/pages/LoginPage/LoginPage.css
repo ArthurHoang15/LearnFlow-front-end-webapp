@@ -1,0 +1,261 @@
+.login-page {
+    display: flex;
+    min-height: 80vh;
+    background-color: #fff;
+    max-width: 1440px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .login-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .login-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    padding-top: 0.3rem;
+  }
+  
+  .login-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+  }
+  
+  .login-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700 !important;
+    margin-bottom: 2rem;
+    color: #00b1fe;
+    font-size: 2.5rem !important;
+  }
+  
+  .login-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .login-button {
+    background-color: #00b1fe !important;
+    color: #fff !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem !important;
+    border-radius: 5px !important;
+    font-size: 1rem !important;
+  }
+  
+  .login-button:hover {
+    background-color: #0088cc !important;
+  }
+  
+  .login-or-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-or-text {
+    display: inline-block;
+    position: relative;
+    padding: 0 1rem;
+    background-color: #fff;
+    z-index: 1;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem !important;
+  }
+  
+  .login-or-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 15px;
+    border-top: 1px solid #ccc;
+    transform: translateY(-50%);
+  }
+  
+  .login-google-button {
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border: 1px solid #00b1fe !important;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    text-transform: none;
+    width: 28rem;
+    color: #00b1fe !important;
+    font-size: 1rem !important;
+  }
+  
+  .login-google-button:hover {
+    background-color: #e0f0ff!important;
+  }
+  
+  .login-google-button .MuiButton-startIcon {
+    margin-right: 0.5rem;
+  }
+  
+  .login-forgot-link {
+    font-family: 'Roboto', sans-serif;
+    color: #00b1fe !important;
+    text-decoration: none;
+    font-size: 1rem !important;
+  }
+  
+  .login-forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  .login-signup-link {
+    margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1rem !important;
+    text-align: center;
+  }
+  
+  .login-signup-link a {
+    color: #00b1fe;
+    text-decoration: underline;
+  }
+  
+  .login-signup-link a:hover {
+    text-decoration: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) { /* Tablet */
+    .login-page {
+      flex-direction: column;
+      min-height: auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 80%;
+    }
+  
+    .login-image-container,
+    .login-image {
+      display: none; /* Hide image and container on tablet and below */
+    }
+  
+    .login-form-container {
+      flex: 100%;
+      width: 100%;
+      padding: 1.5rem;
+    }
+  
+    .login-title {
+      font-size: 2rem !important;
+    }
+  
+    .login-subtitle {
+      font-size: 1rem !important;
+    }
+  
+    .login-form {
+      max-width: 350px;
+    }
+  
+    .login-button {
+      padding: 0.2rem !important;
+      font-size: 1rem !important;
+    }
+  
+    .login-or-text {
+      font-size: 1rem !important;
+    }
+  
+    .login-google-button {
+      width: 22rem;
+      padding: 0.4rem;
+      font-size: 1rem !important;
+    }
+  
+    .login-forgot-link {
+      font-size: 1rem !important;
+    }
+  
+    .login-signup-link {
+      font-size: 1rem !important;
+    }
+  }
+  
+  
+  @media (max-width: 480px) { /* Mobile */
+    .login-page {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .login-image-container,
+    .login-image {
+      display: none; /* Hide image and container on mobile */
+    }
+  
+    .login-form-container {
+      padding: 1rem 0.5rem;
+    }
+  
+    .login-title {
+      font-size: 1.8rem !important;
+    }
+  
+    .login-subtitle {
+      font-size: 0.85rem !important;
+    }
+  
+    .login-form {
+      max-width: 90%;
+    }
+  
+    .login-button {
+      padding: 0.1rem !important;
+      font-size: 0.85rem !important;
+    }
+  
+    .login-or-text {
+      font-size: 0.85rem !important;
+    }
+  
+    .login-google-button {
+      width: 90%;
+      padding: 0.1rem !important;
+      font-size: 0.85rem !important;
+    }
+  
+    .login-forgot-link {
+      font-size: 0.85rem !important;
+    }
+  
+    .login-signup-link {
+      font-size: 0.85rem !important;
+    }
+  }

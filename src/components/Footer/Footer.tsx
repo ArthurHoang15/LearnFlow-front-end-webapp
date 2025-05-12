@@ -1,5 +1,6 @@
 import './Footer.css';
-import { Typography, Link, IconButton } from '@mui/material';
+import { Typography, Link as MuiLink, IconButton } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -38,35 +39,35 @@ export const Footer = () => {
               Home
             </Typography>
             <div className="footer-links">
-              <Link href="#" className="footer-link" underline="hover">
+              <MuiLink href="#" className="footer-link" underline="hover">
                 Benefits
-              </Link>
-              <Link href="#" className="footer-link" underline="hover">
+              </MuiLink>
+              <MuiLink href="#" className="footer-link" underline="hover">
                 Our Courses
-              </Link>
-              <Link href="#" className="footer-link" underline="hover">
+              </MuiLink>
+              <MuiLink href="#" className="footer-link" underline="hover">
                 Our Testimonials
-              </Link>
-              <Link href="#" className="footer-link" underline="hover">
+              </MuiLink>
+              <MuiLink href="#" className="footer-link" underline="hover">
                 Our FAQ
-              </Link>
+              </MuiLink>
             </div>
           </div>
 
           <div className="footer-section footer-about">
-            <Typography variant="h6" className="footer-heading">
+            <MuiLink component={RouterLink} to="/about-us" underline="none" className="footer-heading" sx={{ fontSize: '1.2rem', fontWeight: 600, color: '#000', fontFamily: 'Poppins, sans-serif', marginBottom: '1rem', display: 'inline-block' }}>
               About Us
-            </Typography>
+            </MuiLink>
             <div className="footer-links">
-              <Link href="#" className="footer-link" underline="hover">
+              <MuiLink component={RouterLink} to="/about-us" className="footer-link" underline="hover">
                 Company
-              </Link>
-              <Link href="#" className="footer-link" underline="hover">
+              </MuiLink>
+              <MuiLink component={RouterLink} to="/about-us" className="footer-link" underline="hover">
                 Achievements
-              </Link>
-              <Link href="#" className="footer-link" underline="hover">
+              </MuiLink>
+              <MuiLink component={RouterLink} to="/about-us" className="footer-link" underline="hover">
                 Our Goals
-              </Link>
+              </MuiLink>
             </div>
           </div>
 

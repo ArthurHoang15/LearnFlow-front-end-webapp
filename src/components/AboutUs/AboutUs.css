@@ -1,0 +1,297 @@
+.aboutus-root {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 24px 0 24px;
+  background: #f6f6f7;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #222;
+}
+
+.aboutus-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.aboutus-intro p {
+  font-size: 1.08rem;
+  color: #444;
+  margin: 0 0 24px 0;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.aboutus-goals-section {
+  margin-top: 32px;
+}
+
+.aboutus-goals-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.aboutus-goals-desc {
+  color: #f6f6f7;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  max-width: 900px;
+}
+
+.aboutus-section-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  margin-bottom: 18px;
+}
+
+.aboutus-section-row:first-child .aboutus-section-title {
+  align-self: center;
+}
+
+.aboutus-section-title {
+  min-width: 210px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+  margin-top: 0.2em;
+}
+
+.aboutus-section-desc {
+  flex: 1;
+  font-size: 1.08rem;
+  color: #444;
+  line-height: 1.7;
+  text-align: left;
+  max-width: 1300px;
+}
+
+.aboutus-divider {
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
+  opacity: 0.7;
+  margin: 18px 0 32px 0;
+}
+
+.aboutus-goals-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 24px;
+  margin-bottom: 32px;
+}
+
+.aboutus-goal-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 210px;
+  transition: box-shadow 0.2s;
+  text-align: left;
+}
+
+.aboutus-goal-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.aboutus-goal-icon {
+  width: 55px;
+  height: 55px;
+  background: #eaf6ff;
+  border-radius: 8%;
+  padding: 1px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  object-fit: contain;
+}
+
+.aboutus-goal-card h3 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.aboutus-goal-card p {
+  font-size: 1.02rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Together Card */
+.aboutus-together-card {
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  padding: 80px 80px 80px 80px;
+  margin: 0 auto 40px auto;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.aboutus-together-card::before {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: -20%;
+  width: 840px;
+  height: 440px;
+  background: var(--aboutus-together-bg) no-repeat center center;
+  background-size: contain;
+  opacity: 1;
+  transform: rotate(45deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aboutus-together-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  min-height: 90px;
+}
+
+.aboutus-together-row h2 {
+  flex: 1;
+  z-index: 2;
+}
+
+.aboutus-together-card h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #222;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.aboutus-together-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 24px;
+  margin-bottom: 0;
+  text-align: left;
+  z-index: 2;
+  position: relative;
+}
+
+.aboutus-join-btn {
+  position: static;
+  margin-left: 32px;
+  align-self: center;
+  z-index: 2;
+  background: #00b2ff;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26,159,255,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.aboutus-join-btn:hover {
+  background: #007be8;
+}
+
+.aboutus-together-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutus-together-row, .aboutus-together-left, .aboutus-join-btn, .aboutus-together-desc, .aboutus-together-row h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutus-highlight {
+  color: #1a9fff;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .aboutus-section-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .aboutus-section-title {
+    margin-bottom: 0;
+  }
+  .aboutus-goals-grid {
+    grid-template-columns: 1fr;
+  }
+  .aboutus-together-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .aboutus-together-card h2 {
+    font-size: 2rem;
+  }
+  .aboutus-together-card::before {
+    width: 80%;
+    min-width: 120px;
+    max-width: 260px;
+  }
+}
+
+.aboutus-section-row.goals {
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+.aboutus-section-row.goals .aboutus-section-title {
+  margin-top: 18px;
+  align-self: flex-start;
+  font-weight: 500;
+}
+
+.aboutus-goals-spacing {
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+
+.aboutus-together-spacing {
+  margin-top: 36px;
+}
+
+.aboutus-together-bg-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 120px;
+  background: url('../../assets/images/Logo2.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.13;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aboutus-together-row h2,
+.aboutus-together-row .aboutus-join-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.aboutus-together-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 

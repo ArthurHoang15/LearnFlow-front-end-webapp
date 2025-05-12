@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 import { LearningHub } from '../pages/LearningHub/LearningHub';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
+import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: 'learning-hub',
         element: <LearningHub />
+      },
+      {
+        path: 'about-us',
+        element: <AboutUsPage />,
       },
       // {
       //   path: 'chat',

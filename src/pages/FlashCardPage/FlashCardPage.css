@@ -1,8 +1,8 @@
 .flashcard-container {
-  max-width: 800px;
+  max-width: 1440px;
   margin: 2rem auto;
-  padding: 1rem;
-  background-color: #f6f6f7;
+  padding: 2rem;
+  background-color: #fff;
   border: 1px solid #00b1fe;
   border-radius: 10px;
   text-align: center;
@@ -34,11 +34,11 @@
 .flashcard-card {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  min-height: 200px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,23 +49,23 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #000;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 0 0 1rem 0;
 }
 
 .flashcard-pronunciation {
   font-family: 'Roboto', sans-serif;
   color: #666;
-  font-size: 1.2rem;
-  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .flashcard-action {
   font-family: 'Roboto', sans-serif;
   color: #00b1fe;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  margin: 0;
+  margin: 1rem 0 0 0;
 }
 
 .flashcard-action:hover {
@@ -75,7 +75,7 @@
 .flashcard-definition {
   font-family: 'Roboto', sans-serif;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 1rem 0 0 0;
 }
 

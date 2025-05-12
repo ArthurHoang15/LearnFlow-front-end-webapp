@@ -34,11 +34,25 @@ const router = createBrowserRouter([
       //   path: 'signup',
       //   element: <SignUpPage />,
       // },
-      // {
-      //   path: 'login',
-      //   element: <LoginPage />,
-      // },
+      {
+      path: 'login',
+      element: <LoginPage />,
+      },
+      {
+        path: '/learning-hub/vocabulary-boost',
+        element: <Vocab />,
+      },
+
+      {
+        path: '/flashcard/:topic',
+        element: <FlashCardPage />,
+      },
       // Thêm các route khác tại đây
+      {
+        path: 'signup',
+        element: <SignUpPage />,
+      }
+      
     ],
   },
 ]);

@@ -1,7 +1,8 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './FlashCardPage.css';
 import topicsData from '../../mocks/data/topics.json';
+import { fetchWordDetails } from '../../api/dictionary';
 
 interface Word {
   word: string;
@@ -15,12 +16,7 @@ interface Topic {
   baseWords: string[];
 }
 
-interface ApiResponse {
-  [key: string]: any;
-  word: string;
-  phonetics?: { text: string }[];
-  meanings?: { definitions: { definition: string }[] }[];
-}
+
 
 const FlashCardPage = () => {
   const { topic } = useParams<{ topic: string }>();
@@ -39,21 +35,8 @@ const FlashCardPage = () => {
       setLoading(true);
       const fetchedWords: Word[] = [];
       for (const word of baseWords) {
-        try {
-          const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-          if (!response.ok) throw new Error('Network response was not ok');
-          const data: ApiResponse[] = await response.json();
-          if (data[0]) {
-            const pronunciation = data[0].phonetics?.[0]?.text || 'N/A';
-            const definition = data[0].meanings?.[0]?.definitions?.[0]?.definition || 'No definition available';
-            fetchedWords.push({ word, pronunciation, definition });
-          } else {
-            fetchedWords.push({ word, pronunciation: 'N/A', definition: 'No definition available' });
-          }
-        } catch (error) {
-          console.error(`Error fetching ${word}:`, error);
-          fetchedWords.push({ word, pronunciation: 'N/A', definition: 'No definition available' });
-        }
+        const wordDetails = await fetchWordDetails(word);
+        fetchedWords.push(wordDetails);
       }
       setWords(fetchedWords);
       setLoading(false);

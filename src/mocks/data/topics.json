@@ -1,0 +1,54 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "name": "Animals",
+      "baseWords": ["ostrich", "elephant", "tiger", "penguin", "giraffe", "kangaroo", "zebra", "lion", "bear", "dolphin"]
+    },
+    {
+      "id": 2,
+      "name": "Fruits and Vegetables",
+      "baseWords": ["apple", "banana", "carrot", "broccoli", "orange", "tomato", "spinach", "grape", "potato", "strawberry"]
+    },
+    {
+      "id": 3,
+      "name": "Weather and Seasons",
+      "baseWords": ["rain", "snow", "sun", "wind", "spring", "summer", "autumn", "winter", "cloud", "storm"]
+    },
+    {
+      "id": 4,
+      "name": "Daily Activities",
+      "baseWords": ["eat", "sleep", "work", "read", "cook", "exercise", "study", "walk", "wash", "relax"]
+    },
+    {
+      "id": 5,
+      "name": "Technology and Gadgets",
+      "baseWords": ["computer", "phone", "tablet", "laptop", "camera", "headphones", "router", "smartwatch", "printer", "speaker"]
+    },
+    {
+      "id": 6,
+      "name": "Food and Drinks",
+      "baseWords": ["pizza", "coffee", "soup", "tea", "bread", "rice", "milk", "cake", "juice", "cheese"]
+    },
+    {
+      "id": 7,
+      "name": "Clothing and Fashion",
+      "baseWords": ["shirt", "pants", "dress", "shoes", "hat", "jacket", "scarf", "socks", "gloves", "belt"]
+    },
+    {
+      "id": 8,
+      "name": "Hobbies and Sports",
+      "baseWords": ["football", "painting", "swimming", "reading", "chess", "running", "gardening", "basketball", "photography", "cycling"]
+    },
+    {
+      "id": 9,
+      "name": "Jobs and Professions",
+      "baseWords": ["doctor", "teacher", "engineer", "chef", "nurse", "lawyer", "artist", "pilot", "scientist", "farmer"]
+    },
+    {
+      "id": 10,
+      "name": "Health and Body",
+      "baseWords": ["heart", "lung", "muscle", "bone", "brain", "skin", "blood", "exercise", "diet", "health"]
+    }
+  ]
+}

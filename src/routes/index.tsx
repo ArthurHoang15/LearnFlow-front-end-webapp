@@ -8,6 +8,8 @@ import { LearningHub } from '../pages/LearningHub/LearningHub';
 import { SmartLearningPage } from '../pages/SmartLearningPage';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
+import Vocab from '../pages/Vocab/Vocab';
+import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,18 @@ const router = createBrowserRouter([
         path: 'login',
         element: <LoginPage />,
       },   
+
+      {
+        path: 'learning-hub/vocabulary-boost',
+        element: <Vocab />,
+      },
+
+      {
+        path: 'flashcard/:topic',
+        element: <FlashCardPage />,
+      }
+
+
       // Thêm các route khác tại đây
     ],
   },

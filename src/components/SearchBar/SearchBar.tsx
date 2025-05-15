@@ -10,12 +10,10 @@ interface SearchBarProps {
 export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [query, setQuery] = useState<string>('');
 
-  // Handle search when Enter key is pressed or search icon is clicked
   const handleSearch = () => {
     onSearch(query);
   };
 
-  // Handle key press events, specifically Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSearch();

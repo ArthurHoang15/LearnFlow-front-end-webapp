@@ -25,9 +25,21 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
     'A vs An', 'Commas'
   ];
 
+  const formControlStyle = {
+    minWidth: 150,
+    '& .MuiOutlinedInput-root': {
+      '&:hover fieldset': {
+        borderColor: '#00b1fe',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#00b1fe',
+      },
+    }
+  };
+
   return (
     <Box className="filter-container">
-      <FormControl size="small" sx={{ minWidth: 150 }}>
+      <FormControl size="small" sx={formControlStyle}>
         <InputLabel>Chapter</InputLabel>
         <Select
           value={chapter}
@@ -40,7 +52,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
         </Select>
       </FormControl>
       
-      <FormControl size="small" sx={{ minWidth: 150 }}>
+      <FormControl size="small" sx={formControlStyle}>
         <InputLabel>Lesson</InputLabel>
         <Select
           value={lesson}
@@ -53,7 +65,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
         </Select>
       </FormControl>
       
-      <FormControl size="small" sx={{ minWidth: 150 }}>
+      <FormControl size="small" sx={formControlStyle}>
         <InputLabel>Status</InputLabel>
         <Select
           value={status}

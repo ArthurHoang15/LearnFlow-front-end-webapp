@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Box, FormControl, InputLabel, Select, MenuItem, IconButton, Tooltip } from '@mui/material';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import './FilterBar.css';
 
 interface FilterBarProps {
@@ -37,8 +38,29 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
     }
   };
 
+  const handleReset = () => {
+    setChapter('All');
+    setLesson('All');
+    setStatus('All');
+  };
+
   return (
-    <Box className="filter-container">
+    <Box className="filter-container" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+      <Tooltip title="Reset filters">
+        <IconButton 
+          onClick={handleReset} 
+          size="small"
+          sx={{ 
+            color: '#00b1fe',
+            '&:hover': {
+              backgroundColor: 'rgba(0, 177, 254, 0.1)'
+            }
+          }}
+        >
+          <RestartAltIcon />
+        </IconButton>
+      </Tooltip>
+
       <FormControl size="small" sx={formControlStyle}>
         <InputLabel>Chapter</InputLabel>
         <Select

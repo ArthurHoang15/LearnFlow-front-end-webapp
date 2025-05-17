@@ -8,6 +8,7 @@ import { LearningHub } from '../pages/LearningHub/LearningHub';
 import { SmartLearningPage } from '../pages/SmartLearningPage';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
+import { StoriesFlowPage } from '../pages/StoriesFlowPage';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,11 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <LoginPage />,
-      },   
+      },  
+      {
+        path: 'learning-hub/stories-flow',
+        element: <StoriesFlowPage />,
+      },  
       // Thêm các route khác tại đây
     ],
   },

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Add this import
-import Chapters from '../../assets/images/chapters.png';
+import Chapters from '../../assets/images/Chapters.png';
 import Chat from '../../assets/images/Chat.png';
 import Mistakes from '../../assets/images/Mistakes.png';
 import Profile from '../../assets/images/Profile.png';

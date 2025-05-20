@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './FlashCardPage.css';
 import topicsData from '../../mocks/data/topics.json';
@@ -30,10 +30,11 @@ const FlashCardPage = () => {
   const [loading, setLoading] = useState(true);
   const [isComplete, setIsComplete] = useState(false); 
   const { width, height } = useWindowSize(); 
-  const topics = topicsData.topics as Topic[];
-  const currentTopic = topics.find(t => t.name === topic);
-  const baseWords = currentTopic?.baseWords || [];
-
+  
+  const topics = useMemo(() => topicsData.topics as Topic[], []);
+  const currentTopic = useMemo(() => topics.find(t => t.name === topic), [topics, topic]);
+  const baseWords = useMemo(() => currentTopic?.baseWords || [], [currentTopic]);
+  
   useEffect(() => {
     const fetchWords = async () => {
       setLoading(true);
@@ -54,15 +55,15 @@ const FlashCardPage = () => {
 
     setCurrentIndex(0);
     setIsFlipped(false);
-    setIsComplete(false); // RESET on topic change
+    setIsComplete(false);
     fetchWords();
-  }, [topic, baseWords]);
+  }, [topic, baseWords]); 
 
   const handleBack = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
       setIsFlipped(false);
-      setIsComplete(false); // Tắt thông báo khi quay lại
+      setIsComplete(false); 
     }
   };
 
@@ -175,7 +176,7 @@ const FlashCardPage = () => {
         <button 
           className="control-button" 
           onClick={handleNext} 
-          disabled={currentIndex === words.length - 1 || loading || !isFlipped}
+          disabled={currentIndex === words.length - 1 || loading}
         > 
           Next →
         </button>

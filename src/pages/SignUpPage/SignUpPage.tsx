@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { TextField, Button, Box, Typography, Checkbox, FormControlLabel } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
-import Signup from '../../assets/images/Signup.png';
+import Signup from '../../assets/images/SignUp.png';
 import './SignUpPage.css';
 
 export const SignUpPage = () => {

@@ -10,6 +10,10 @@ import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 import Vocab from '../pages/Vocab/Vocab';
 import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
+import Users from '../pages/Users/Users';
+import AdminLearningHub  from '../pages/AdminLearningHub/AdminLearningHub';
+import Feedback from '../pages/Feedback/Feedback';
+import AdminStories from '../pages/AdminStories/AdminStories';
 
 const router = createBrowserRouter([
   {
@@ -58,8 +62,27 @@ const router = createBrowserRouter([
       {
         path: 'flashcard/:topic',
         element: <FlashCardPage />,
-      }
+      },
+      
+      {
+        path:'admin/users',
+        element: <Users />,
+      },
 
+      {
+        path: 'admin/learning-hub',
+        element: <AdminLearningHub />,
+      },
+
+      {
+        path: 'admin/feedback',
+        element: <Feedback />,
+      },
+
+      {
+        path: 'admin/stories',
+        element: <AdminStories />,
+      }
 
       // Thêm các route khác tại đây
     ],

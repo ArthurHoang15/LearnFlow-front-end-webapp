@@ -14,6 +14,7 @@ import Users from '../pages/Users/Users';
 import AdminLearningHub  from '../pages/AdminLearningHub/AdminLearningHub';
 import Feedback from '../pages/Feedback/Feedback';
 import AdminStories from '../pages/AdminStories/AdminStories';
+import AdminVocab from '../pages/AdminVocab/AdminVocab';
 
 const router = createBrowserRouter([
   {
@@ -82,8 +83,12 @@ const router = createBrowserRouter([
       {
         path: 'admin/stories',
         element: <AdminStories />,
-      }
+      },
 
+      {
+        path: 'admin/adminvocab',
+        element: <AdminVocab />,
+      }
       // Thêm các route khác tại đây
     ],
   },

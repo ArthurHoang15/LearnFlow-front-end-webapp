@@ -22,7 +22,7 @@ const AdminLearningHub: React.FC = () => {
     if (itemName === 'Stories Flow') {
       navigate('/admin/stories'); // Chuyển đến trang AdminStories
     } else if (itemName === 'Vocabulary boost') {
-      navigate('/admin/vocab'); // Chuyển đến trang AdminVocab
+      navigate('/admin/adminvocab'); // Chuyển đến trang AdminVocab
     }
     // Không làm gì với Smart Learning vì chưa có yêu cầu
   };

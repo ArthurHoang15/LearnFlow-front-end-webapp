@@ -51,7 +51,7 @@
   color: black !important;
 }
 
-.add-topic-button {
+.add-admin-topic-button {
   background-color: #00b1fe !important;
   color: white !important;
   padding: 0.35rem 1rem !important;
@@ -61,12 +61,12 @@
   margin-left: 0rem !important;
 }
 
-.add-topic-button:hover {
+.add-admin-topic-button:hover {
   background-color: #0099e0 !important;
 }
 
 /* Grid layout */
-.topics-grid {
+.admin-topics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
@@ -74,7 +74,7 @@
 }
 
 /* Topic card styles */
-.topic-card {
+.admin-topic-card {
   position: relative;
   padding: 1.5rem;
   border-radius: 10px;
@@ -87,30 +87,30 @@
   transition: box-shadow 0.2s ease;
 }
 
-.topic-card:hover {
+.admin-topic-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
 }
 
-.topic-content {
+.admin-topic-content {
   flex: 1;
   margin-bottom: 1rem;
 }
 
-.topic-name {
+.admin-topic-name {
   color: #000 !important;
   margin-bottom: 1rem !important;
   font-weight: 550 !important;
   word-break: break-word;
 }
 
-.topic-words {
+.admin-topic-words {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.topic-word {
+.admin-topic-word {
   background-color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
@@ -120,7 +120,7 @@
 }
 
 /* Action buttons */
-.vocab-topic-actions {
+.vocab-admin-topic-actions {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -143,27 +143,27 @@
 }
 
 /* Topic status styles */
-.vocab-topic-status {
+.vocab-admin-topic-status {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   order: 1;
 }
 
-.vocab-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+.vocab-admin-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
   color: #00b1fe !important;
 }
 
-.vocab-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+.vocab-admin-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
   background-color: #00b1fe !important;
   opacity: 0.5;
 }
 
-.vocab-topic-switch.disabled .MuiSwitch-switchBase {
+.vocab-admin-topic-switch.disabled .MuiSwitch-switchBase {
   color: #e0e0e0 !important;
 }
 
-.vocab-topic-switch.disabled .MuiSwitch-track {
+.vocab-admin-topic-switch.disabled .MuiSwitch-track {
   background-color: #e0e0e0 !important;
 }
 
@@ -225,16 +225,16 @@
     width: 100%;
   }
 
-  .add-topic-button {
+  .add-admin-topic-button {
     width: 100%;
     margin-left: 0 !important;
     margin-top: 0.5rem !important;
   }
 
-  .topics-grid {
+  .admin-topics-grid {
     grid-template-columns: 1fr;
   }
-  .vocab-topic-actions {
+  .vocab-admin-topic-actions {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
@@ -251,11 +251,11 @@
     font-size: 1.5rem !important;
   }
 
-  .topic-card {
+  .admin-topic-card {
     padding: 1rem;
   }
 
-  .topic-word {
+  .admin-topic-word {
     font-size: 0.8rem !important;
   }
 }

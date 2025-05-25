@@ -174,7 +174,7 @@ const AdminVocab: React.FC = () => {
             variant="contained"
             startIcon={<AddIcon />}
             onClick={() => handleOpenDialog()}
-            className="add-topic-button"
+            className="add-admin-topic-button"
           >
             Add Topic
           </Button>
@@ -190,29 +190,29 @@ const AdminVocab: React.FC = () => {
           <Typography color="error">{error}</Typography>
         </Box>
       ) : (
-        <Box className="topics-grid">
+        <Box className="admin-topics-grid">
           {filteredTopics.map((topic) => (
-            <Box key={topic.id} className="topic-card">
-              <Typography variant="h6" className="topic-name">
+            <Box key={topic.id} className="admin-topic-card">
+              <Typography variant="h6" className="admin-topic-name">
                 {topic.name}
               </Typography>
-              <Box className="topic-words">
+              <Box className="admin-topic-words">
                 {topic.baseWords.map((word, index) => (
-                  <Typography key={index} className="topic-word">
+                  <Typography key={index} className="admin-topic-word">
                     {word}
                   </Typography>
                 ))}
-              </Box>              <Box className="vocab-topic-actions">
+              </Box>              <Box className="vocab-admin-topic-actions">
                 <IconButton
                   onClick={() => handleOpenDialog(topic)}
                   className="vocab-edit-button"
                 >
                   <EditIcon />
-                </IconButton>                <Box className="vocab-topic-status">
+                </IconButton>                <Box className="vocab-admin-topic-status">
                   <Switch
                     checked={topic.isEnabled}
                     onChange={() => handleToggleTopic(topic.id)}
-                    className={`vocab-topic-switch ${topic.isEnabled ? 'enabled' : 'disabled'}`}
+                    className={`vocab-admin-topic-switch ${topic.isEnabled ? 'enabled' : 'disabled'}`}
                   />                  <Typography className={`vocab-status-text ${topic.isEnabled ? 'enabled' : 'disabled'}`}>
                     {topic.isEnabled ? 'Enabled' : 'Disabled'}
                   </Typography>

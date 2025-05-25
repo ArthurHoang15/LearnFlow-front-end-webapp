@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, FormControl, InputLabel, Select, MenuItem, IconButton, Tooltip } from '@mui/material';
+import { Box, FormControl, InputLabel, Select, MenuItem, IconButton, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import './FilterBar.css';
 
@@ -8,6 +8,10 @@ interface FilterBarProps {
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  
   const [chapter, setChapter] = useState<string>('All');
   const [lesson, setLesson] = useState<string>('All');
   const [status, setStatus] = useState<string>('All');
@@ -27,7 +31,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
   ];
 
   const formControlStyle = {
-    minWidth: 150,
+    minWidth: isMobile ? '100%' : (isTablet ? 120 : 150),
+    marginBottom: isMobile ? 1.5 : 0,
     '& .MuiOutlinedInput-root': {
       '&:hover fieldset': {
         borderColor: '#00b1fe',
@@ -45,13 +50,21 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onFilterBarChange }) => {
   };
 
   return (
-    <Box className="filter-container" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+    <Box className="filter-container" sx={{ 
+      display: 'flex',
+      flexDirection: isMobile ? 'column' : 'row',
+      flexWrap: isTablet ? 'wrap' : 'nowrap',
+      alignItems: isMobile ? 'stretch' : 'center',
+      gap: 2 
+    }}>
       <Tooltip title="Reset filters">
         <IconButton 
           onClick={handleReset} 
           size="small"
           sx={{ 
             color: '#00b1fe',
+            alignSelf: isMobile ? 'flex-start' : 'center',
+            marginBottom: isMobile ? 1 : 0,
             '&:hover': {
               backgroundColor: 'rgba(0, 177, 254, 0.1)'
             }

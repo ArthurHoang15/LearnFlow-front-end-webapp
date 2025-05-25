@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import Chapters from '../../assets/images/chapters.png';
 import Chat from '../../assets/images/Chat.png';
 import Mistakes from '../../assets/images/Mistakes.png';
@@ -8,11 +9,38 @@ import Vocab from '../../assets/images/Vocab.png';
 import './Explore.css';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { fetchAndSelectRandomFaqs, Faq } from '../../api/faq.ts'; // Import the utility function
+import { fetchAndSelectRandomFaqs, Faq } from '../../api/faq.ts';
 
 export const ExploreSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [faqs, setFaqs] = useState<Faq[]>([]);
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  // Navigation function using switch
+  const handleNavigation = (destination: string) => {
+    switch (destination) {
+      case 'chapters':
+        navigate('/learning-hub/smart-learning');
+        break;
+      case 'vocabulary':
+        navigate('/learning-hub/vocabulary-boost');
+        break;
+      case 'stories':
+        navigate('/learning-hub/stories-flow');
+        break;
+      case 'mistakes':
+        navigate('/learning-hub/mistake-tracker');
+        break;
+      case 'chat':
+        navigate('/chat');
+        break;
+      case 'profile':
+        navigate('/profile');
+        break;
+      default:
+        navigate('/');
+    }
+  };
 
   // Fetch and select random FAQs using the utility function
   useEffect(() => {
@@ -65,7 +93,7 @@ export const ExploreSection = () => {
           <p className="explore-description">
             Learn English Step-by-Step. Follow structured chapters with interactive lessons like fill-in-the-blank, drag-and-drop, and instant feedback to build grammar and sentence skills.
           </p>
-          <button className="explore-button">Learn More</button>
+          <button className="explore-button" onClick={() => handleNavigation('chapters')}>Learn More</button>
         </div>
         <div className="explore-card">
           <div className="explore-image" style={{ backgroundImage: `url(${Vocab})` }} />
@@ -73,7 +101,7 @@ export const ExploreSection = () => {
           <p className="explore-description">
             Master Words with Flashcards. Explore vocabulary by topic with searchable lists. Flip flashcards to see phonetics, examples, and translations. Hear native pronunciation for better retention.
           </p>
-          <button className="explore-button">View All</button>
+          <button className="explore-button" onClick={() => handleNavigation('vocabulary')}>View All</button>
         </div>
         <div className="explore-card">
           <div className="explore-image" style={{ backgroundImage: `url(${Stories})` }} />
@@ -81,7 +109,7 @@ export const ExploreSection = () => {
           <p className="explore-description">
             Read & Learn from Real Stories. Browse stories by topic or word type. Tap any word to get meaning, phonetics (US/UK), and word type—all in English. Perfect for immersive reading.
           </p>
-          <button className="explore-button">Read a Story</button>
+          <button className="explore-button" onClick={() => handleNavigation('stories')}>Read a Story</button>
         </div>
         {/* Row 2 */}
         <div className="explore-card">
@@ -90,15 +118,15 @@ export const ExploreSection = () => {
           <p className="explore-description">
             Review & Fix Your Errors. Automatically saves your mistakes from lessons. Get explanations, mark as reviewed or not, and turn errors into progress.
           </p>
-          <button className="explore-button">Check Mistakes</button>
+          <button className="explore-button" onClick={() => handleNavigation('mistakes')}>Check Mistakes</button>
         </div>
         <div className="explore-card">
           <div className="explore-image" style={{ backgroundImage: `url(${Chat})` }} />
           <h3 className="explore-title">LearnFlow Chat</h3>
           <p className="explore-description">
-            Connect & Communicate. Message friends, exchange tips, and send feedback to the LearnFlow team. Learning is better when it’s social.
+            Connect & Communicate. Message friends, exchange tips, and send feedback to the LearnFlow team. Learning is better when it's social.
           </p>
-          <button className="explore-button">Join the Conversation</button>
+          <button className="explore-button" onClick={() => handleNavigation('chat')}>Join the Conversation</button>
         </div>
         <div className="explore-card">
           <div className="explore-image" style={{ backgroundImage: `url(${Profile})` }} />
@@ -106,7 +134,7 @@ export const ExploreSection = () => {
           <p className="explore-description">
             Track Your Journey & Achievements. Update your avatar, view personal stats, and celebrate your learning achievements all in one place.
           </p>
-          <button className="explore-button">View Profile</button>
+          <button className="explore-button" onClick={() => handleNavigation('profile')}>View Profile</button>
         </div>
       </div>
 
@@ -138,4 +166,4 @@ export const ExploreSection = () => {
     </section>
   );
 };
-   
+

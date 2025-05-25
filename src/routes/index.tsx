@@ -29,69 +29,84 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        index: true,
         path: 'learning-hub',
         element: <LearningHub />
       },
       {
+        index: true,
         path: 'learning-hub/smart-learning',
         element: <SmartLearningPage />, 
       },
       {
+        index: true,
         path: 'about-us',
         element: <AboutUsPage />,
       },
       {
+        index: true,
         path: 'chat',
         element: <ChatPage />,
       },
       {
+        index: true,
         path: 'profile',
         element: <UserProfilePage />,
       },
       {
+        index: true,
         path: 'signup',
         element: <SignUpPage />,
       },
       {
+        index: true,
         path: 'learning-hub/mistake-tracker',
         element: <MistakeTrackerPage />,
       },
       {
+        index: true,
         path: 'login',
         element: <LoginPage />,
       },   
 
       {
+        index: true,
         path: 'learning-hub/vocabulary-boost',
         element: <Vocab />,
       },
 
       {
+        index: true,
         path: 'flashcard/:topic',
         element: <FlashCardPage />,
       },
       
       {
+        index: true,
         path:'admin/users',
         element: <Users />,
       },
 
       {
+        index: true,
         path: 'admin/learning-hub',
         element: <AdminLearningHub />,
       },
 
       {
+        index: true,
         path: 'admin/feedback',
         element: <Feedback />,
       },
 
       {
+        index: true,
         path: 'admin/stories',
         element: <AdminStories />,
       },
 
       {
+        index: true,
         path: 'admin/adminvocab',
         element: <AdminVocab />,
       }

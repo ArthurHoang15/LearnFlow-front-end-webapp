@@ -1,0 +1,262 @@
+/* src/pages/admin/AdminStories.css */
+.stories-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #00b1fe;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stories-title {
+  font-size: 2rem !important;
+  font-weight: 550 !important;
+  color: #000;
+}
+
+.stories-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.stories-search {
+  width: 400px;
+}
+
+.stories-sort {
+  width: 300px;
+}
+
+.stories-search .MuiOutlinedInput-root {
+  border-radius: 5px;
+  background-color: #f6f6f7;
+}
+
+.stories-search .MuiInputBase-input {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.stories-search .MuiSvgIcon-root {
+  color: black !important;
+}
+
+.clear-search {
+  color: black !important;
+  font-size: 0.8rem !important;
+}
+
+.stories-sort .MuiOutlinedInput-root {
+  border-radius: 5px;
+  background-color: #f6f6f7;
+}
+
+.stories-sort .MuiSelect-select {
+  padding: 0.5rem 2rem 0.5rem 1rem !important;
+  font-size: 0.9rem;
+}
+
+.stories-table-container {
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+.stories-table {
+  min-width: 100%;
+  margin: 15px 0;
+}
+
+.stories-table .stories-table-header {
+  font-weight: 550 !important;
+  font-size: 0.9rem !important;
+  color: #000;
+  background-color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Điều chỉnh độ rộng cột */
+.stories-table .stories-table-header:nth-child(1) { /* ID */
+  width: 8%;
+}
+.stories-table .stories-table-header:nth-child(2) { /* TITLE */
+  width: 15%;
+}
+.stories-table .stories-table-header:nth-child(3) { /* DESCRIPTION */
+  width: 28%;
+}
+.stories-table .stories-table-header:nth-child(4) { /* AUTHOR */
+  width: 15%;
+}
+.stories-table .stories-table-header:nth-child(5) { /* PAGES */
+  width: 12%;
+}
+.stories-table .stories-table-header:nth-child(6) { /* PUBLISHED */
+  width: 12%;
+}
+
+.stories-table .MuiTableCell-root {
+  font-size: 1rem !important;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.stories-action-button {
+  padding: 0.25rem;
+}
+
+.stories-edit-icon {
+  font-size: 1.2rem;
+  color: #00b1fe;
+}
+
+.stories-action-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stories-topic-status {
+  display: flex;
+  align-items: center;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+  color: #00b1fe !important;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #00b1fe !important;
+  opacity: 0.5;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-switchBase {
+  color: #e0e0e0 !important;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-track {
+  background-color: #e0e0e0 !important;
+}
+
+.stories-topic-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+  color: #00b1fe !important;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #00b1fe !important;
+  opacity: 0.5;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-switchBase {
+  color: #e0e0e0 !important;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-track {
+  background-color: #e0e0e0 !important;
+}
+
+.stories-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.stories-pagination .MuiPaginationItem-root {
+  font-size: 0.9rem;
+}
+
+.stories-pagination .Mui-selected {
+  background-color: #00b1fe !important;
+  color: #fff;
+}
+
+/* Dialog button styles */
+.edit-dialog-cancel {
+  color: #00b1fe !important;
+  background-color: white !important;
+}
+
+.edit-dialog-cancel:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.edit-dialog-save {
+  color: white !important;
+  background-color: #00b1fe !important;
+}
+
+.edit-dialog-save:hover {
+  background-color: #0099e0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stories-container {
+    padding: 1rem;
+  }
+
+  .stories-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .stories-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .stories-search,
+  .stories-sort {
+    width: 100%;
+  }
+
+  .stories-table .MuiTableCell-root {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .stories-table .stories-table-header {
+    font-size: 0.8rem;
+  }
+
+  .action-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-title {
+    font-size: 1.2rem;
+  }
+
+  .stories-search .MuiInputBase-input,
+  .stories-sort .MuiSelect-select {
+    font-size: 0.8rem;
+  }
+
+  .stories-table .MuiTableCell-root {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+
+  .stories-table .stories-table-header {
+    font-size: 0.7rem;
+  }
+}

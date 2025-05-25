@@ -1,0 +1,17 @@
+[
+  { "id": "00001", "username": "Someone name", "email": "someone1@example.com", "phone number": "0123456789", "address": "Some where in the world", "dateOfBirth": "2025-04-13" },
+  { "id": "00002", "username": "Another name", "email": "another2@example.com", "phone number": "0987654321", "address": "Another place", "dateOfBirth": "2025-04-14" },
+  { "id": "00003", "username": "Third name", "email": "third3@example.com", "phone number": "0112233445", "address": "Somewhere else", "dateOfBirth": "2025-04-15" },
+  { "id": "00004", "username": "Someone name", "email": "someone4@example.com", "phone number": "0123456789", "address": "Some where in the world", "dateOfBirth": "2025-04-13" },
+  { "id": "00005", "username": "Another name", "email": "another5@example.com", "phone number": "0987654321", "address": "Another place", "dateOfBirth": "2025-04-14" },
+  { "id": "00006", "username": "Third name", "email": "third6@example.com", "phone number": "0112233445", "address": "Somewhere else", "dateOfBirth": "2025-04-15" },
+  { "id": "00007", "username": "Someone name", "email": "someone7@example.com", "phone number": "0123456789", "address": "Some where in the world", "dateOfBirth": "2025-04-13" },
+  { "id": "00008", "username": "Another name", "email": "another8@example.com", "phone number": "0987654321", "address": "Another place", "dateOfBirth": "2025-04-14" },
+  { "id": "00009", "username": "Third name", "email": "third9@example.com", "phone number": "0112233445", "address": "Somewhere else", "dateOfBirth": "2025-04-15" },
+  { "id": "00010", "username": "Someone name", "email": "someone10@example.com", "phone number": "0123456789", "address": "Some where in the world", "dateOfBirth": "2025-04-13" },
+  { "id": "00011", "username": "Another name", "email": "another11@example.com", "phone number": "0987654321", "address": "Another place", "dateOfBirth": "2025-04-14" },
+  { "id": "00012", "username": "Third name", "email": "third12@example.com", "phone number": "0112233445", "address": "Somewhere else", "dateOfBirth": "2025-04-15" },
+  { "id": "00013", "username": "Someone name", "email": "someone13@example.com", "phone number": "0123456789", "address": "Some where in the world", "dateOfBirth": "2025-04-13" },
+  { "id": "00014", "username": "Another name", "email": "another14@example.com", "phone number": "0987654321", "address": "Another place", "dateOfBirth": "2025-04-14" },
+  { "id": "00015", "username": "Third name", "email": "third15@example.com", "phone number": "0112233445", "address": "Somewhere else", "dateOfBirth": "2025-04-15" }
+]

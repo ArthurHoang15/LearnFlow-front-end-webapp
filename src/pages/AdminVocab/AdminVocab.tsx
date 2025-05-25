@@ -202,21 +202,18 @@ const AdminVocab: React.FC = () => {
                     {word}
                   </Typography>
                 ))}
-              </Box>
-              <Box className="topic-actions">
+              </Box>              <Box className="vocab-topic-actions">
                 <IconButton
                   onClick={() => handleOpenDialog(topic)}
-                  className="edit-button"
+                  className="vocab-edit-button"
                 >
                   <EditIcon />
-                </IconButton>
-                <Box className="topic-status">
+                </IconButton>                <Box className="vocab-topic-status">
                   <Switch
                     checked={topic.isEnabled}
                     onChange={() => handleToggleTopic(topic.id)}
-                    className={`topic-switch ${topic.isEnabled ? 'enabled' : 'disabled'}`}
-                  />
-                  <Typography className={`status-text ${topic.isEnabled ? 'enabled' : 'disabled'}`}>
+                    className={`vocab-topic-switch ${topic.isEnabled ? 'enabled' : 'disabled'}`}
+                  />                  <Typography className={`vocab-status-text ${topic.isEnabled ? 'enabled' : 'disabled'}`}>
                     {topic.isEnabled ? 'Enabled' : 'Disabled'}
                   </Typography>
                 </Box>

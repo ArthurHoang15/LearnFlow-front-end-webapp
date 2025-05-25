@@ -110,20 +110,65 @@
   font-weight: 500;
 }
 
-.action-button {
+.stories-action-button {
   padding: 0.25rem;
 }
 
-.action-icon {
+.stories-edit-icon {
   font-size: 1.2rem;
-}
-
-.action-icon.edit {
   color: #00b1fe;
 }
 
-.action-icon.delete {
-  color: #00b1fe;
+.stories-action-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stories-topic-status {
+  display: flex;
+  align-items: center;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+  color: #00b1fe !important;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #00b1fe !important;
+  opacity: 0.5;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-switchBase {
+  color: #e0e0e0 !important;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-track {
+  background-color: #e0e0e0 !important;
+}
+
+.stories-topic-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+  color: #00b1fe !important;
+}
+
+.stories-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #00b1fe !important;
+  opacity: 0.5;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-switchBase {
+  color: #e0e0e0 !important;
+}
+
+.stories-topic-switch.disabled .MuiSwitch-track {
+  background-color: #e0e0e0 !important;
 }
 
 .stories-pagination {

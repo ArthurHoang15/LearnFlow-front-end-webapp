@@ -120,7 +120,7 @@
 }
 
 /* Action buttons */
-.topic-actions {
+.vocab-topic-actions {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -129,14 +129,13 @@
   padding-top: 1.5rem;
 }
 
-.edit-button {
+.vocab-edit-button {
   color: #00b1fe !important;
   background-color: white !important;
   border: 1px solid #00b1fe !important;
   padding: 6px !important;
   order: 2;
-  margin-top: 14.3rem! important;
-  margin-right: 10px! important;
+  margin-right: 10px !important;
 }
 
 .edit-button:hover {
@@ -144,40 +143,40 @@
 }
 
 /* Topic status styles */
-.topic-status {
+.vocab-topic-status {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   order: 1;
 }
 
-.topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
+.vocab-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {
   color: #00b1fe !important;
 }
 
-.topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+.vocab-topic-switch.enabled .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
   background-color: #00b1fe !important;
   opacity: 0.5;
 }
 
-.topic-switch.disabled .MuiSwitch-switchBase {
+.vocab-topic-switch.disabled .MuiSwitch-switchBase {
   color: #e0e0e0 !important;
 }
 
-.topic-switch.disabled .MuiSwitch-track {
+.vocab-topic-switch.disabled .MuiSwitch-track {
   background-color: #e0e0e0 !important;
 }
 
-.status-text {
+.vocab-status-text {
   font-size: 0.9rem !important;
   font-weight: 500 !important;
 }
 
-.status-text.enabled {
+.vocab-status-text.enabled {
   color: #00b1fe !important;
 }
 
-.status-text.disabled {
+.vocab-status-text.disabled {
   color: #757575 !important;
 }
 
@@ -235,14 +234,13 @@
   .topics-grid {
     grid-template-columns: 1fr;
   }
-
-  .topic-actions {
+  .vocab-topic-actions {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
   }
 
-  .edit-button {
+  .vocab-edit-button {
     width: 100%;
     justify-content: center !important;
   }

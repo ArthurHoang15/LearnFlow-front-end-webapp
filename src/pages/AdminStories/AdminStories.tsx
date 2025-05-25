@@ -22,10 +22,10 @@ import {
   DialogContent,
   DialogActions,
   Button,
+  Switch,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import storiesData from '../../mocks/data/stories.json';
 import './AdminStories.css';
 
@@ -36,6 +36,7 @@ interface Story {
   author: string;
   pages: number;
   published: string;
+  isEnabled?: boolean;
 }
 
 const AdminStories: React.FC = () => {
@@ -46,9 +47,13 @@ const AdminStories: React.FC = () => {
   const [editStory, setEditStory] = useState<Story | null>(null);
   const [openEditDialog, setOpenEditDialog] = useState(false);
   const rowsPerPage = 5;
-
   useEffect(() => {
-    setStories(storiesData);
+    // Initialize stories with isEnabled status
+    const storiesWithEnabled = storiesData.map(story => ({
+      ...story,
+      isEnabled: true // default to enabled
+    }));
+    setStories(storiesWithEnabled);
   }, []);
 
   const filteredStories = stories.filter(
@@ -69,9 +74,10 @@ const AdminStories: React.FC = () => {
   const handlePageChange = (_: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
-
-  const handleDeleteStory = (id: string) => {
-    setStories(stories.filter((story) => story.id !== id));
+  const handleToggleStory = (id: string) => {
+    setStories(stories.map(story => 
+      story.id === id ? { ...story, isEnabled: !story.isEnabled } : story
+    ));
   };
 
   const handleEditStory = (story: Story) => {
@@ -163,20 +169,22 @@ const AdminStories: React.FC = () => {
                   <TableCell>{story.description}</TableCell>
                   <TableCell>{story.author}</TableCell>
                   <TableCell>{story.pages}</TableCell>
-                  <TableCell>{story.published}</TableCell>
-                  <TableCell>
-                    <IconButton
-                      className="action-button"
-                      onClick={() => handleEditStory(story)}
-                    >
-                      <EditIcon className="action-icon edit" />
-                    </IconButton>
-                    <IconButton
-                      className="action-button"
-                      onClick={() => handleDeleteStory(story.id)}
-                    >
-                      <DeleteIcon className="action-icon delete" />
-                    </IconButton>
+                  <TableCell>{story.published}</TableCell>                  <TableCell>
+                    <Box className="stories-action-wrapper">
+                      <IconButton
+                        className="stories-action-button"
+                        onClick={() => handleEditStory(story)}
+                      >
+                        <EditIcon className="stories-edit-icon" />
+                      </IconButton>
+                      <Box className="stories-topic-status">
+                        <Switch
+                          checked={story.isEnabled}
+                          onChange={() => handleToggleStory(story.id)}
+                          className={`stories-topic-switch ${story.isEnabled ? 'enabled' : 'disabled'}`}
+                        />
+                      </Box>
+                    </Box>
                   </TableCell>
                 </TableRow>
               ))}

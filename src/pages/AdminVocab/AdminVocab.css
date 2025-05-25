@@ -20,6 +20,7 @@
   font-size: 2rem !important;
   font-weight: 550 !important;
   color: #000;
+  
 }
 
 .admin-vocab-actions {
@@ -53,11 +54,11 @@
 .add-topic-button {
   background-color: #00b1fe !important;
   color: white !important;
-  padding: 0.5rem 1rem !important;
+  padding: 0.35rem 1rem !important;
   border-radius: 4px !important;
   text-transform: none !important;
   font-weight: 500 !important;
-  margin-left: 1rem !important;
+  margin-left: 0rem !important;
 }
 
 .add-topic-button:hover {
@@ -76,10 +77,11 @@
 .topic-card {
   position: relative;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #f6f6f7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
+  min-height: 300px;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.2s ease;
@@ -87,6 +89,7 @@
 
 .topic-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
 }
 
 .topic-content {
@@ -107,13 +110,6 @@
   gap: 0.5rem;
 }
 
-.topic-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: auto;
-}
-
 .topic-word {
   background-color: white;
   padding: 0.25rem 0.75rem;
@@ -125,10 +121,12 @@
 
 /* Action buttons */
 .topic-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .edit-button {
@@ -136,6 +134,9 @@
   background-color: white !important;
   border: 1px solid #00b1fe !important;
   padding: 6px !important;
+  order: 2;
+  margin-top: 14.3rem! important;
+  margin-right: 10px! important;
 }
 
 .edit-button:hover {
@@ -147,6 +148,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  order: 1;
 }
 
 .topic-switch.enabled .MuiSwitch-switchBase.Mui-checked {

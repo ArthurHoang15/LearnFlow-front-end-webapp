@@ -14,6 +14,7 @@ import {
 import Switch from '@mui/material/Switch';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
+import SearchIcon from '@mui/icons-material/Search';
 import topicsData from '../../mocks/data/topics.json';
 import './AdminVocab.css';
 
@@ -157,13 +158,17 @@ const AdminVocab: React.FC = () => {
         <Typography variant="h5" className="admin-vocab-title">
           Vocabulary Topics
         </Typography>
-        <Box className="admin-vocab-actions">
-          <TextField
+        <Box className="admin-vocab-actions">          <TextField
             variant="outlined"
             placeholder="Search topics..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="admin-vocab-search"
+            InputProps={{
+              startAdornment: (
+                <SearchIcon sx={{ color: 'action.active', mr: 1 }} />
+              ),
+            }}
           />
           <Button
             variant="contained"
@@ -248,10 +253,15 @@ const AdminVocab: React.FC = () => {
             margin="normal"
             helperText="Enter words separated by commas"
           />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog}>Cancel</Button>
-          <Button onClick={handleSaveTopic} variant="contained" color="primary">
+        </DialogContent>        <DialogActions>
+          <Button onClick={handleCloseDialog} className="dialog-cancel-button">
+            Cancel
+          </Button>
+          <Button 
+            onClick={handleSaveTopic} 
+            variant="contained" 
+            className="dialog-save-button"
+          >
             {editingTopic ? 'Save Changes' : 'Add Topic'}
           </Button>
         </DialogActions>

@@ -17,6 +17,7 @@ import AdminLearningHub  from '../pages/AdminLearningHub/AdminLearningHub';
 import Feedback from '../pages/Feedback/Feedback';
 import AdminStories from '../pages/AdminStories/AdminStories';
 import AdminVocab from '../pages/AdminVocab/AdminVocab';
+import { StoriesFlowPage } from '../pages/StoriesFlowPage';
 
 const router = createBrowserRouter([
   {
@@ -109,6 +110,12 @@ const router = createBrowserRouter([
         index: true,
         path: 'admin/adminvocab',
         element: <AdminVocab />,
+      },
+
+      {
+        index: true,
+        path: 'learning-hub/stories-flow',
+        element: <StoriesFlowPage />,
       }
       // Thêm các route khác tại đây
     ],

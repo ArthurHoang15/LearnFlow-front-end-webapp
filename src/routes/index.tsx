@@ -10,6 +10,7 @@ import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 import Vocab from '../pages/Vocab/Vocab';
 import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
+import  ChatPage  from '../pages/ChatPage/ChatPage';
 import Users from '../pages/Users/Users';
 import AdminLearningHub  from '../pages/AdminLearningHub/AdminLearningHub';
 import Feedback from '../pages/Feedback/Feedback';
@@ -38,10 +39,10 @@ const router = createBrowserRouter([
         path: 'about-us',
         element: <AboutUsPage />,
       },
-      // {
-      //   path: 'chat',
-      //   element: <ChatPage />,
-      // },
+      {
+        path: 'chat',
+        element: <ChatPage />,
+      },
       {
         path: 'profile',
         element: <UserProfilePage />,

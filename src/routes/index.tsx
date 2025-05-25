@@ -35,15 +35,10 @@ const router = createBrowserRouter([
         path: 'profile',
         element: <UserProfilePage />,
       },
-      // {
-      //   path: 'signup',
-      //   element: <SignUpPage />,
-      // },
       {
-      path: 'login',
-      element: <LoginPage />,
+        path: 'login',
+        element: <LoginPage />,
       },
-      // Thêm các route khác tại đây
       {
         path: 'signup',
         element: <SignUpPage />,

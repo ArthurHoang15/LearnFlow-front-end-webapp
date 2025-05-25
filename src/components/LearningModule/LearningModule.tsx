@@ -7,9 +7,17 @@ interface LearningModuleProps {
   description: string;
   buttonText: string;
   imageUrl: string;
+  onButtonClick?: () => void; // Add this prop
 }
 
-export const LearningModule: React.FC<LearningModuleProps> = ({ header, subheader, description, buttonText, imageUrl }) => {
+export const LearningModule: React.FC<LearningModuleProps> = ({ 
+  header, 
+  subheader, 
+  description, 
+  buttonText, 
+  imageUrl,
+  onButtonClick 
+}) => {
   const [moduleTitle, setModuleTitle] = useState<string>('');
   const [moduleSubheader, setModuleSubheader] = useState<string>('');
   const [moduleDescription, setModuleDescription] = useState<string>('');
@@ -32,7 +40,12 @@ export const LearningModule: React.FC<LearningModuleProps> = ({ header, subheade
           <h3 className="subheader">{moduleSubheader}</h3>
           <p className="description">{moduleDescription}</p>
         </div>
-        <button className="action-button">{actionButtonText}</button>
+        <button 
+          className="action-button"
+          onClick={onButtonClick} // Add onClick handler
+        >
+          {actionButtonText}
+        </button>
       </div>
       <div className="image-section" style={{ backgroundImage: `url(${imageSource})` }} />
     </div>

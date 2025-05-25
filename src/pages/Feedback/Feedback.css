@@ -1,0 +1,179 @@
+/* src/pages/admin/Feedback.css */
+/* Feedback container styles */
+.feedback-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #00b1fe;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.feedback-title {
+  margin-bottom: 2rem !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  text-align: left;
+  font-size: 2rem!important;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Feedback card styles */
+.feedback-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f6f6f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+/* User info and comment styles */
+.feedback-user {
+  font-weight: 550 !important;
+  color: #00b1fe !important;
+  font-size: 1rem !important;
+}
+
+.feedback-comment {
+  font-size: 0.95rem !important;
+  color: #666 !important;
+  line-height: 1.5;
+}
+
+/* Answer section styles */
+.answer-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid #00b1fe;
+  position: relative;
+}
+
+.answer-section Typography {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.answer-section Typography:first-child {
+  font-weight: 550;
+  color: #00b1fe;
+  margin-right: 0.5rem;
+}
+
+/* Answer input section styles */
+.answer-input-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.answer-input {
+  background-color: #fff;
+}
+
+.answer-input .MuiOutlinedInput-root {
+  border-radius: 6px;
+}
+
+.answer-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.answer-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #00b1fe;
+}
+
+/* Button styles */
+.action-button,
+.edit-button {
+  color: #00b1fe !important;
+  background-color: #fff !important;
+  border: 1px solid #00b1fe !important;
+  padding: 8px !important;
+}
+
+.action-button:hover,
+.edit-button:hover {
+  background-color: #f0f9ff !important;
+}
+
+.edit-button {
+  position: absolute !important;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 4px !important;
+}
+
+/* Loading and Error states */
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-container {
+  background-color: #fff3f3;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.no-feedback {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  background-color: #f6f6f7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feedback-container {
+    padding: 1rem;
+  }
+
+  .feedback-card {
+    padding: 1rem;
+  }
+
+  .answer-input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-button {
+    align-self: flex-end;
+  }
+
+  .feedback-user,
+  .feedback-comment {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+    font-size: 1.2rem !important;
+  }
+
+  .answer-section Typography {
+    font-size: 0.85rem;
+  }
+
+  .edit-button {
+    padding: 2px !important;
+  }
+}

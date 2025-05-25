@@ -1,0 +1,264 @@
+/* src/components/Navbar/AdminNavbar.css */
+.navbar {
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.navbar-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #00b1fe;
+  border-left: #00b1fe solid 2px;
+  border-right: #00b1fe solid 2px;
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.navbar-item:hover {
+  color: #00b1fe;
+}
+
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00b1fe;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+/* New styles for Admin and Avatar group */
+.navbar-admin-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Khoảng cách giữa "Admin" và avatar */
+}
+
+.navbar-admin-text {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 0rem 0.5rem;
+
+}
+
+
+.navbar-avatar-button {
+  background-color: #00b1fe!important;
+  color: #fff!important;
+  border-radius: 0 5px 5px 0; /* Bo góc phải cho avatar */
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar-avatar-button:hover {
+  background-color: #0088cc;
+}
+
+.navbar-mobile-toggle {
+  color: #00b1fe;
+  display: none;
+}
+
+.navbar-close-icon {
+  color: #000;
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 1025px) {
+  .navbar-brand {
+    margin-right: 2rem;
+  }
+
+  .navbar-menu {
+    flex: 1;
+  }
+
+  .navbar-item {
+    font-size: 1.2rem !important;
+  }
+
+  .navbar-admin-text {
+    font-size: 1rem !important;
+  }
+
+  .navbar-avatar-button {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar-menu-open {
+    top: 100%;
+  }
+
+  .navbar-item {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-item::after {
+    bottom: 0;
+  }
+
+  .navbar-admin-group {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-admin-text {
+    width: 100%;
+    border-radius: 5px 5px 0 0; /* Bo góc trên khi ở mobile */
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-avatar-button {
+    width: 100%;
+    border-radius: 0 0 5px 5px; /* Bo góc dưới khi ở mobile */
+    padding: 0.75rem;
+  }
+
+  .navbar-logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar-mobile-toggle {
+    position: absolute;
+    top: 0.3rem;
+    right: 0rem;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-menu {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-item {
+    font-size: 1rem !important;
+    padding: 0.4rem 0;
+  }
+
+  .navbar-admin-text {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar-avatar-button {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .navbar-logo-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .navbar-mobile-toggle {
+    top: 0.3rem !important;
+    right: 0.3rem !important;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .navbar-container {
+    padding: 0rem;
+  }
+
+  .navbar-menu {
+    padding: 1rem 0.5rem;
+  }
+
+  .navbar-item {
+    font-size: 0.7rem !important;
+    padding-bottom: 0rem !important;
+    padding-top: 0.1rem !important;
+  }
+
+  .navbar-admin-text {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .navbar-avatar-button {
+    padding: 0.5rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .navbar-logo-icon {
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+  }
+
+  .navbar-mobile-toggle {
+    top: 0.2rem !important;
+    right: 0rem !important;
+    font-size: 1rem !important;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "The Adventure Begins",
+    "description": "A thrilling journey through a magical land.",
+    "author": "John Doe",
+    "pages": 120,
+    "published": "2024-10-15"
+  },
+  {
+    "id": "2",
+    "title": "Mystery at Midnight",
+    "description": "A detective story full of suspense.",
+    "author": "Jane Smith",
+    "pages": 85,
+    "published": "2024-09-20"
+  },
+  {
+    "id": "3",
+    "title": "Love in the Stars",
+    "description": "A romantic tale set in the cosmos.",
+    "author": "Emily Johnson",
+    "pages": 150,
+    "published": "2024-08-10"
+  }
+]

@@ -14,7 +14,7 @@ export const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage,
       <MUIPagination
         count={totalPages}
         page={currentPage}
-        onChange={(e, page) => onPageChange(page)}
+        onChange={(_, page) => onPageChange(page)}
         color="primary"
         variant="outlined"
         shape="rounded"

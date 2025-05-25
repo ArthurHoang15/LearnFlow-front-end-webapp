@@ -1,0 +1,6 @@
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }

@@ -8,6 +8,7 @@ import { LearningHub } from '../pages/LearningHub/LearningHub';
 import { SmartLearningPage } from '../pages/SmartLearningPage';
 import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
+import { MistakeTrackerPage } from '../pages/MistakeTrackerPage';
 import Vocab from '../pages/Vocab/Vocab';
 import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
 import  ChatPage  from '../pages/ChatPage/ChatPage';
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: 'signup',
         element: <SignUpPage />,
+      },
+      {
+        path: 'learning-hub/mistake-tracker',
+        element: <MistakeTrackerPage />,
       },
       {
         path: 'login',

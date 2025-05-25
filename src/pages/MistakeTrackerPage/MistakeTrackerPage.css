@@ -1,0 +1,29 @@
+.mistake-list-container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: #00b1fe solid 1.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mistake-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.mistake-header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  font-family: poppins, sans-serif;
+}

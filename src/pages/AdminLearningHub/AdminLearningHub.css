@@ -1,0 +1,150 @@
+
+.learning-hub-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #00b1fe;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.learning-hub-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin: 2rem 0rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+.item-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f3ff;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.item-icon svg {
+  font-size: 2.3rem;
+  color: #00b1fe !important;
+}
+
+.item-name {
+  flex-grow: 1;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.admin-learning-hub .item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-learning-hub .action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem; 
+  border-radius: 5px !important;
+  background-color: #00b1fe !important;
+  color: #fff !important;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 120px; 
+}
+
+.admin-learning-hub .action-button:hover {
+  background-color: #0088cc !important;
+}
+
+.admin-learning-hub .action-button svg {
+  color: #fff;
+  margin-right: 0.5rem; 
+  margin-left: 0;
+  font-size: 1.2rem; 
+}
+
+.admin-learning-hub .action-button.edit {
+  margin-right: 1rem; 
+}
+
+.admin-learning-hub .action-text {
+  font-size: 1rem !important;
+  color: #fff;
+  font-weight: 550 !important;
+  padding-right: 0.5rem;
+  padding-top: 0
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .learning-hub-container {
+    padding: 1rem;
+  }
+
+  .learning-hub-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+
+  .item-icon {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+
+  .item-name {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+
+  .admin-learning-hub .item-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .admin-learning-hub .action-button {
+    padding: 0.3rem 0.8rem;
+    min-width: 100px;
+  }
+
+  .admin-learning-hub .action-button svg {
+    margin-right: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .admin-learning-hub .action-text {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .admin-learning-hub .action-button {
+    padding: 0.25rem 0.6rem;
+    min-width: 80px;
+  }
+
+  .admin-learning-hub .action-button svg {
+    margin-right: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  .admin-learning-hub .action-text {
+    font-size: 0.7rem !important;
+  }
+}

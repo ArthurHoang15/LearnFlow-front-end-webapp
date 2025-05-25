@@ -73,20 +73,20 @@
 /* Typing animation for the p element */
 .typing {
   display: flex;
-  flex-direction: column; /* Stack the text and cursor vertically */
-  align-items: center; /* Center the text and cursor */
-  opacity: 0; /* Start with the entire typing section hidden */
-  animation: reveal 0s forwards; /* Instantly reveal the section after delay */
-  animation-delay: 2s; /* Wait for h1 and h2 to finish fading in */
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 2s;
 }
 
 .typing-text {
-  white-space: nowrap; /* Prevent text wrapping during animation */
-  overflow: hidden; /* Hide the text until the animation reveals it */
-  display: inline-block;
-  width: 0; /* Start with no width */
-  animation: typing 3s steps(48, end) forwards; /* Typing animation */
-  animation-delay: 0.5s; /* Start after h1 and h2 fade-in */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: 
+    typing 3s steps(50, end) forwards;
+  animation-delay: 2.5s, 2.5s;
 }
 
 .cursor {
@@ -137,6 +137,11 @@
   50% {
     opacity: 0;
   }
+}
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: #00b1fe; }
 }
 
 /* Responsive adjustments */

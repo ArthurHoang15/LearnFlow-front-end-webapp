@@ -10,6 +10,7 @@ import { UserProfilePage } from '../pages/UserProfilePage/UserProfilePage';
 import { AboutUsPage } from '../pages/AboutUsPage/AboutUsPage';
 import Vocab from '../pages/Vocab/Vocab';
 import FlashCardPage from '../pages/FlashCardPage/FlashCardPage';
+import  ChatPage  from '../pages/ChatPage/ChatPage';
 
 const router = createBrowserRouter([
   {
@@ -33,10 +34,10 @@ const router = createBrowserRouter([
         path: 'about-us',
         element: <AboutUsPage />,
       },
-      // {
-      //   path: 'chat',
-      //   element: <ChatPage />,
-      // },
+      {
+        path: 'chat',
+        element: <ChatPage />,
+      },
       {
         path: 'profile',
         element: <UserProfilePage />,

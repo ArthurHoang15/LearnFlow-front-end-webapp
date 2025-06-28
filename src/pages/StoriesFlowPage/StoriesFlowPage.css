@@ -1,0 +1,30 @@
+.story-flow-page {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.story-flow-content{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  font-family: poppins, sans-serif;
+}
+
+.story-list {
+  display: flex;
+  gap: 2rem;
+}
